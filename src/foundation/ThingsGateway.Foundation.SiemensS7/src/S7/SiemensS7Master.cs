@@ -26,8 +26,6 @@ namespace ThingsGateway.Foundation.SiemensS7;
 /// <inheritdoc/>
 public partial class SiemensS7Master : ProtocolBase
 {
-
-
     /// <inheritdoc/>
     public SiemensS7Master(IChannel channel) : base(channel)
     {

@@ -204,16 +204,16 @@ public class Dlt645_2007Master : ProtocolBase
     }
 
     /// <inheritdoc/>
-    public override Task<OperResult<byte[]>> ReadAsync(string address, int length, CancellationToken cancellationToken = default)
+    public override async Task<OperResult<byte[]>> ReadAsync(string address, int length, CancellationToken cancellationToken = default)
     {
         try
         {
             var commandResult = Dlt645Helper.GetDlt645_2007Command(address, (byte)ControlCode.Read, Station);
-            return SendThenReturnAsync(address, commandResult, cancellationToken);
+            return await SendThenReturnAsync(address, commandResult, cancellationToken);
         }
         catch (Exception ex)
         {
-            return Task.FromResult(new OperResult<byte[]>(ex));
+            return new OperResult<byte[]>(ex);
         }
     }
 

@@ -205,16 +205,16 @@ public class ModbusMaster : ProtocolBase
     }
 
     /// <inheritdoc/>
-    public override Task<OperResult<byte[]>> ReadAsync(string address, int length, CancellationToken cancellationToken = default)
+    public override async Task<OperResult<byte[]>> ReadAsync(string address, int length, CancellationToken cancellationToken = default)
     {
         try
         {
             var commandResult = ModbusHelper.GetReadModbusCommand(address, length, Station);
-            return SendThenReturnAsync(address, commandResult, cancellationToken);
+            return await SendThenReturnAsync(address, commandResult, cancellationToken);
         }
         catch (Exception ex)
         {
-            return Task.FromResult(new OperResult<byte[]>(ex));
+            return new OperResult<byte[]>(ex);
         }
     }
 

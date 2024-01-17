@@ -1,6 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
+	<Target Name="PostPublish" AfterTargets="Publish">
+		<Exec Command=" 
+		set dir=&quot;$(SolutionDir)bin\$(Configuration)\ThingsGateway.Web.Entry\$(TargetFramework)\Plugins&quot;&#xD;&#xA; 
+		if not exist %dir%  md %dir%  &#xD;&#xA;
+		set dir1=&quot;$(PublishDir)Plugins&quot;&#xD;&#xA; 
+		if not exist %dir1%  md %dir1%  &#xD;&#xA;
+		
+			  xcopy %dir% %dir1% /E /H /C /K /Y  &#xD;&#xA;&#xD;&#xA;" />
 
+			
+	</Target>
+	
 	<PropertyGroup>
 		<TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
 		<ApplicationIcon>wwwroot\favicon.ico</ApplicationIcon>
