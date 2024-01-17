@@ -23,6 +23,10 @@ namespace ThingsGateway.Cache;
 /// </summary>
 public class LiteDBDefalutCacheItem<T> : IPrimaryIdEntity
 {
+    /// <summary>
+    /// LiteDBDefalutCacheItem
+    /// </summary>
+    /// <param name="data"></param>
     public LiteDBDefalutCacheItem(T data)
     {
         Id = YitIdHelper.NextId();

@@ -22,6 +22,8 @@ using ThingsGateway.Core;
 
 namespace ThingsGateway.Cache;
 
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员的 XML 注释
+
 public static class LiteDBCacheUtil
 {
     private const string ex = ".ldb";

@@ -16,6 +16,9 @@ using System.Text;
 
 namespace ThingsGateway.Core.Extension.Json;
 
+/// <summary>
+/// JsonExtension
+/// </summary>
 public static class JsonExtension
 {
     #region Json序列化和反序列化

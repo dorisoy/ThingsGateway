@@ -107,7 +107,7 @@ public class RandomUtil
     /// <summary>
     /// 生成随机字符串
     /// </summary>
-    /// <param name="Length">生成长度</param>
+    /// <param name="length">生成长度</param>
     /// <returns></returns>
     public static string CreateRandomString(int length)
     {

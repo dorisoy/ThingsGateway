@@ -14,8 +14,16 @@
 
 namespace ThingsGateway.Components
 {
+    /// <summary>
+    /// IPlatformService
+    /// </summary>
     public interface IPlatformService
     {
+        /// <summary>
+        /// OnLogExport
+        /// </summary>
+        /// <param name="logPath"></param>
+        /// <returns></returns>
         public Task OnLogExport(string logPath);
     }
 }

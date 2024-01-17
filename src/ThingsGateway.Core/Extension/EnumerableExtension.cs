@@ -14,6 +14,9 @@
 
 namespace ThingsGateway.Core.Extension
 {
+    /// <summary>
+    /// EnumerableExtension
+    /// </summary>
     public static class EnumerableExtension
     {
         /// <summary>

@@ -25,6 +25,7 @@ using ThingsGateway.Core.Extension;
 using ThingsGateway.Core.Extension.Json;
 
 namespace ThingsGateway.Components;
+#pragma warning disable CS1591 // 缺少对公共可见类型或成员的 XML 注释
 
 public class BlazorAppService : IAsyncDisposable
 {
@@ -155,8 +156,6 @@ public class BlazorAppService : IAsyncDisposable
     /// <summary>
     /// 导出
     /// </summary>
-    /// <param name="values"></param>
-    /// <returns></returns>
     public async Task DownXlsxAsync(MemoryStream memoryStream, string fileName)
     {
         memoryStream.Seek(0, SeekOrigin.Begin);
@@ -229,9 +228,6 @@ public class BlazorAppService : IAsyncDisposable
     /// <summary>
     /// 切换主题模式, 传入按键参数,objRef,以及是否夜间主题
     /// </summary>
-    /// <param name="objRef"></param>
-    /// <param name="isDark"></param>
-    /// <param name="e"></param>
     public async ValueTask SwitchTheme(object objRef, string option, MouseEventArgs e)
     {
         CommonJS ??= await JSRuntime.InvokeAsync<IJSObjectReference>("import", $"{BlazorAppService.DefaultResourceUrl}js/common.js");

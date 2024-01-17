@@ -25,6 +25,13 @@ public class LiteDBOptions
     /// <value>The data source.</value>
     public string DataSource { get; set; }
 
+    /// <summary>
+    /// Password
+    /// </summary>
     public string? Password { get; set; } = null;
+
+    /// <summary>
+    /// ConnectionType
+    /// </summary>
     public LiteDB.ConnectionType ConnectionType { get; set; } = LiteDB.ConnectionType.Direct;
 }

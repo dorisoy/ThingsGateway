@@ -22,8 +22,11 @@ namespace ThingsGateway.Cache;
 /// </summary>
 public partial class MemoryCacheService : ISimpleCacheService
 {
-    public readonly MemoryCache _memoryCache;
+    private readonly MemoryCache _memoryCache;
 
+    /// <summary>
+    /// 内存缓存
+    /// </summary>
     public MemoryCacheService()
     {
         _memoryCache = new MemoryCache();

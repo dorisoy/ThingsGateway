@@ -21,6 +21,9 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace ThingsGateway.Components;
 
+/// <summary>
+/// ServiceExtension
+/// </summary>
 public static class ServiceExtension
 {
     /// <inheritdoc/>

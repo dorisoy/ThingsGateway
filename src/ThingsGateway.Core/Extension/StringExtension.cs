@@ -16,6 +16,9 @@ using System.Text.RegularExpressions;
 
 namespace ThingsGateway.Core.Extension;
 
+/// <summary>
+/// StringExtension
+/// </summary>
 public static class StringExtension
 {
     /// <summary>
@@ -81,6 +84,11 @@ public static class StringExtension
     /// <returns></returns>
     public static string LastCharToUpper(this string input) => string.IsNullOrEmpty(input) ? input : input.Last().ToString().ToUpper();
 
+    /// <summary>
+    /// 匹配邮箱格式
+    /// </summary>
+    /// <param name="s"></param>
+    /// <returns></returns>
     public static (bool isMatch, Match match) MatchEmail(this string s)
     {
         if (string.IsNullOrEmpty(s) || s.Length < 7)

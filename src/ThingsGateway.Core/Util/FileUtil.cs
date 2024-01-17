@@ -16,13 +16,14 @@ using System.Text;
 
 namespace ThingsGateway.Core;
 
+/// <summary>
+/// FileUtil
+/// </summary>
 public class FileUtil
 {
     /// <summary>
     /// 读取文件
     /// </summary>
-    /// <param name="Path"></param>
-    /// <returns></returns>
     public static string ReadFile(string Path, Encoding encoding = default)
     {
         encoding ??= Encoding.UTF8;

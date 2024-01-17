@@ -14,9 +14,6 @@
 
 using Furion;
 
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-
 using NewLife;
 
 namespace ThingsGateway.Cache;
@@ -41,9 +38,5 @@ public class Startup : AppStartup
         Setting.Current.PluginServer = string.Empty;
         Setting.Current.ServiceAddress = string.Empty;
         Setting.Current.Save();
-    }
-
-    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-    {
     }
 }
