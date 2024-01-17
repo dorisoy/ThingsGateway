@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+
+
+	
+	<!--Admin-->
+	<ItemGroup>
+		<ProjectReference Include="..\ThingsGateway.Admin.ApiController\ThingsGateway.Admin.ApiController.csproj" />
+		<ProjectReference Include="..\ThingsGateway.Admin.Blazor\ThingsGateway.Admin.Blazor.csproj" />
+	</ItemGroup>
+
+
+	<!--采集网关-->
+	<ItemGroup Condition="'$(SolutionName)'!='ThingsGateway - Admin'">
+		<ProjectReference Include="..\ThingsGateway.Gateway.ApiController\ThingsGateway.Gateway.ApiController.csproj" />
+		<ProjectReference Include="..\ThingsGateway.Gateway.Blazor\ThingsGateway.Gateway.Blazor.csproj" />
+	</ItemGroup>
+	
+
+
+</Project>
