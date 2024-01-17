@@ -263,10 +263,6 @@ public abstract class DriverBase : DisposableObject
             }
             else
             {
-                if (CurrentDevice.DeviceStatus == DeviceStatusEnum.OffLine)
-                    if (Protocol != null)
-                        if (Protocol.Channel != null)
-                            await Protocol.Channel.ConnectAsync(3000, cancellationToken);
                 if (!IsConnected())
                     CurrentDevice.SetDeviceStatus(DateTimeUtil.TimerXNow, 999);
             }
