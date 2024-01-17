@@ -87,7 +87,7 @@ public class RuntimeInfoControler : IDynamicApiController
     [Description("获取实时报警信息")]
     public async Task<SqlSugarPagedList<VariableData>> GetRealAlarmList([FromQuery] VariablePageInput input)
     {
-        var data = _alarmHostService.RealAlarmDeviceVariables
+        var data = _alarmHostService.RealAlarmVariables
             .WhereIF(!input.Name.IsNullOrEmpty(), a => a.Name == input.Name)
             .WhereIF(input.DeviceId != null, a => a.DeviceId == input.DeviceId)
             .ToPagedList(input);

@@ -62,7 +62,7 @@ public partial class RealAlarmPage
 
     private Task<SqlSugarPagedList<AlarmVariable>> QueryCallAsync(AlarmVariablePageInput input)
     {
-        var devices = AlarmWorker.RealAlarmDeviceVariables.Adapt<List<AlarmVariable>>();
+        var devices = AlarmWorker.RealAlarmVariables.Adapt<List<AlarmVariable>>();
         var data = devices
           .WhereIF(!string.IsNullOrEmpty(input.Name), u => u.Name.Contains(input.Name))
          .WhereIF(!string.IsNullOrEmpty(input.RegisterAddress), u => u.RegisterAddress.Contains(input.RegisterAddress))

@@ -57,7 +57,7 @@ public abstract class BusinessBaseWithCacheInterval<T, T2, T3> : BusinessBaseWit
             CollectDevices.ForEach(a => { a.DeviceStatusChange += DeviceStatusChange; DeviceStatusChange(a); });
             CurrentDevice.VariableRunTimes.ForEach(a => { a.VariableValueChange += VariableValueChange; VariableValueChange(a); });
             alarmWorker.OnAlarmChanged += AlarmValueChange;
-            alarmWorker.RealAlarmDeviceVariables.Adapt<List<AlarmVariable>>().ToList().ForEach(a => AlarmValueChange(a));
+            alarmWorker.RealAlarmVariables.Adapt<List<AlarmVariable>>().ToList().ForEach(a => AlarmValueChange(a));
         }
     }
 

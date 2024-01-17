@@ -20,8 +20,6 @@ using ThingsGateway.Core.Extension;
 
 using TouchSocket.Core;
 
-using Yitter.IdGenerator;
-
 namespace ThingsGateway.Gateway.Application;
 
 /// <summary>
@@ -149,7 +147,8 @@ public class ChannelThread
             driverBase.IsInitSuccess = false;
             driverBase?.Logger?.LogWarning(ex, $"{driverBase.DeviceName} 初始化链路失败");
         }
-        CancellationTokenSources.TryAdd(driverBase.DeviceId, new());
+        var token = CancellationTokenSources.GetOrAdd(0, new CancellationTokenSource());
+        CancellationTokenSources.TryAdd(driverBase.DeviceId, CancellationTokenSource.CreateLinkedTokenSource(token.Token));
     }
 
     /// <summary>
@@ -263,8 +262,7 @@ public class ChannelThread
             }
             else
             {
-                var token = new CancellationTokenSource();
-                CancellationTokenSources.TryAdd(YitIdHelper.NextId(), token);
+                var token = CancellationTokenSources.GetOrAdd(0, new CancellationTokenSource());
                 //初始化业务线程
                 await InitTaskAsync(token.Token);
                 if (DriverTask.Status == TaskStatus.Created)

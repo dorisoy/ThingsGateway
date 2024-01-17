@@ -240,7 +240,7 @@ public partial class MqttServer : BusinessBaseWithCacheIntervalScript<VariableDa
         //分解List，避免超出mqtt字节大小限制
         var varData = CurrentDevice.VariableRunTimes.Adapt<List<VariableData>>().ChunkBetter(_driverPropertys.SplitSize);
         var devData = CollectDevices.Adapt<List<DeviceData>>().ChunkBetter(_driverPropertys.SplitSize);
-        var alramData = WorkerUtil.GetWoker<AlarmWorker>().RealAlarmDeviceVariables.Adapt<List<AlarmVariable>>().ChunkBetter(_driverPropertys.SplitSize);
+        var alramData = WorkerUtil.GetWoker<AlarmWorker>().RealAlarmVariables.Adapt<List<AlarmVariable>>().ChunkBetter(_driverPropertys.SplitSize);
         List<MqttApplicationMessage> Messages = new();
         foreach (var item in varData)
         {

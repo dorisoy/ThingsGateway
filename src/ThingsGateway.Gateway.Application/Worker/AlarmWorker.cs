@@ -62,7 +62,7 @@ public class AlarmWorker : BackgroundService
     /// <summary>
     /// 实时报警列表
     /// </summary>
-    public ConcurrentList<VariableRunTime> RealAlarmDeviceVariables { get; } = new();
+    public ConcurrentList<VariableRunTime> RealAlarmVariables { get; } = new();
 
     /// <summary>
     /// 服务状态
@@ -92,7 +92,7 @@ public class AlarmWorker : BackgroundService
                 item.VariableRunTimes?.ForEach(v => { v.VariableCollectChange += DeviceVariableChange; });
             }
             StoppingTokens.Add(new());
-            await InitAsync();
+            await InitAsync(StoppingTokens.Last().Token);
             if (RealAlarmTask.Status == TaskStatus.Created)
                 RealAlarmTask.Start();
         }
@@ -117,9 +117,10 @@ public class AlarmWorker : BackgroundService
                 device.VariableRunTimes?.ForEach(v => { v.VariableCollectChange -= DeviceVariableChange; });
             }
 
-            _ = Task.Run(() =>
-            {
-                StoppingTokens.ParallelForEach(cancellationToken =>
+
+            StoppingTokens.ParallelForEach(cancellationToken =>
+         {
+             _ = Task.Run(() =>
              {
                  try
                  {
@@ -132,7 +133,7 @@ public class AlarmWorker : BackgroundService
                  {
                  }
              });
-            });
+         });
 
             await Task.Delay(100);
 
@@ -170,7 +171,7 @@ public class AlarmWorker : BackgroundService
                 }
             });
             StoppingTokens.Clear();
-            RealAlarmDeviceVariables.Clear();
+            RealAlarmVariables.Clear();
         }
         catch (Exception ex)
         {
@@ -336,14 +337,14 @@ public class AlarmWorker : BackgroundService
         if (eventEnum == EventTypeEnum.Finish)
         {
             //实时报警没有找到的话直接返回
-            if (!RealAlarmDeviceVariables.Any(it => it.Id == item.Id))
+            if (!RealAlarmVariables.Any(it => it.Id == item.Id))
             {
                 return;
             }
         }
         else if (eventEnum == EventTypeEnum.Alarm)
         {
-            var variable = RealAlarmDeviceVariables.FirstOrDefault(it => it.Id == item.Id);
+            var variable = RealAlarmVariables.FirstOrDefault(it => it.Id == item.Id);
             if (variable != null)
             {
                 if (item.AlarmType == alarmEnum)
@@ -363,7 +364,7 @@ public class AlarmWorker : BackgroundService
         }
         else if (eventEnum == EventTypeEnum.Finish)
         {
-            var oldAlarm = RealAlarmDeviceVariables.FirstOrDefault(it => it.Id == item.Id);
+            var oldAlarm = RealAlarmVariables.FirstOrDefault(it => it.Id == item.Id);
             item.AlarmType = oldAlarm.AlarmType;
             item.EventType = eventEnum;
             item.AlarmLimit = oldAlarm.AlarmLimit;
@@ -385,15 +386,15 @@ public class AlarmWorker : BackgroundService
 
         if (eventEnum == EventTypeEnum.Alarm)
         {
-            lock (RealAlarmDeviceVariables)
+            lock (RealAlarmVariables)
             {
-                RealAlarmDeviceVariables.RemoveWhere(it => it.Id == item.Id);
-                RealAlarmDeviceVariables.Add(item);
+                RealAlarmVariables.RemoveWhere(it => it.Id == item.Id);
+                RealAlarmVariables.Add(item);
             }
         }
         else
         {
-            RealAlarmDeviceVariables.RemoveWhere(it => it.Id == item.Id);
+            RealAlarmVariables.RemoveWhere(it => it.Id == item.Id);
         }
     }
 
@@ -406,11 +407,11 @@ public class AlarmWorker : BackgroundService
     /// <summary>
     /// 初始化
     /// </summary>
-    private async Task InitAsync()
+    private async Task InitAsync(CancellationToken cancellation)
     {
-        var stoppingToken = StoppingTokens.Last().Token;
-        RealAlarmTask = await Task.Factory.StartNew(async () =>
+        RealAlarmTask = await Task.Factory.StartNew(async (a) =>
         {
+            var stoppingToken = (CancellationToken)a!;
             _logger?.LogInformation($"实时报警线程开始");
             while (!stoppingToken.IsCancellationRequested)
             {
@@ -441,7 +442,7 @@ public class AlarmWorker : BackgroundService
                 }
             }
         }
- , TaskCreationOptions.LongRunning);
+ , cancellation, TaskCreationOptions.LongRunning);
     }
 
     #endregion 核心实现

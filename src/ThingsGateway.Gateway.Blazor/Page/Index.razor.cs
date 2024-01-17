@@ -101,7 +101,7 @@ public partial class Index
             _collectDeviceCount = GlobalData.CollectDevices.Count;
             _businessDeviceCount = GlobalData.BusinessDevices.Count;
             _variableCount = GlobalData.AllVariables.Count();
-            _alarmCount = WorkerUtil.GetWoker<AlarmWorker>().RealAlarmDeviceVariables.Count;
+            _alarmCount = WorkerUtil.GetWoker<AlarmWorker>().RealAlarmVariables.Count;
             showCollectDeviceChart();
             showBusinessDeviceChart();
             showVariableChart();

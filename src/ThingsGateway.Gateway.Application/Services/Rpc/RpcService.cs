@@ -91,8 +91,9 @@ public class RpcService : IRpcService
             }
             if (dev.CurrentDevice.DeviceStatus == DeviceStatusEnum.OffLine)
             {
-                results.TryAdd(item.Key, new OperResult("设备已离线"));
-                continue;
+                //results.TryAdd(item.Key, new OperResult("设备已离线"));
+                //continue;
+                //取消条件，离西安状态也尝试写入
             }
             if (dev.CurrentDevice.DeviceStatus == DeviceStatusEnum.Pause)
             {
