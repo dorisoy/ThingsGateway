@@ -42,13 +42,13 @@ export default function (props) {
       bgColor: "#38e550",
     },
 
-    Demo: {
+    推荐: {
       bgColor: "#38e550",
     },
 
     Pro版: {
       bgColor: "#23AAF2",
-    },
+    }
   };
   return (
     <label

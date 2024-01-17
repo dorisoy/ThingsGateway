@@ -1,10 +1,11 @@
+
 module.exports = {
-  title: "thingsgateway",
-  tagline: "物联网",
-  url: "https://diego2098.gitee.io",
-  baseUrl: "/thingsgateway-docs/",
+    title: "thingsgateway",
+    tagline: "物联网",
+    url: "https://diego2098.gitee.io",
+    baseUrl: "/thingsgateway-docs/",
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenMarkdownLinks: "throw",
   favicon: "img/favicon.ico",
   projectName: "ThingsGateway",
   scripts: [],
@@ -29,24 +30,19 @@ module.exports = {
       additionalLanguages: ["powershell", "csharp", "sql"],
     },
     navbar: {
-      title: "ThingsGateway",
-      logo: {
-        alt: "ThingsGateway Logo",
-        src: "img/ThingsGatewayLogo.png",
+        title: "ThingsGateway",
+        logo: {
+            alt: "ThingsGateway Logo",
+            src: "img/ThingsGatewayLogo.png",
       },
       hideOnScroll: true,
       items: [
-        {
-          to: "docs",
-          activeBasePath: "docs",
-          label: "文档",
-          position: "left",
-        },
         {
           label: "更新日志",
           position: "left",
           to: "docs/upgrade"
         },
+
         {
           label: "源码",
           position: "right",
@@ -64,6 +60,16 @@ module.exports = {
               href: "https://www.nuget.org/profiles/kimdiego",
             },
           ],
+        },
+        {
+          label: "博客",
+          position: "right",
+          href: "https://www.cnblogs.com/ThingsGateway/collections/1104",
+        },
+        {
+          label: "视频",
+          position: "right",
+          href: "https://space.bilibili.com/88105259/channel/series",
         },
         {
           label: "社区",
@@ -126,6 +132,7 @@ module.exports = {
           showLastUpdateAuthor: true,
           sidebarCollapsible: true,
           sidebarCollapsed: true,
+          
           // sidebarCollapsible: true,
         },
         // blog: {
@@ -145,7 +152,7 @@ module.exports = {
       "@easyops-cn/docusaurus-search-local",
       {
         hashed: true,
-        language: ["en", "zh"],
+        language: ["zh","en"],
         highlightSearchTermsOnTargetPage: true,
         explicitSearchResultPath: true,
       },

@@ -18,13 +18,13 @@ function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
 
-  React.useEffect(() => {}, []);
+  React.useEffect(() => { }, []);
 
   return (
-    <Layout
-      title={`ThingsGateway说明文档。 ${siteConfig.title}`}
-      description="ThingsGateway说明文档"
-    >
+      <Layout
+          title={`ThingsGateway说明文档。 ${siteConfig.title}`}
+          description="ThingsGateway说明文档"
+      >
       <Banner />
       <Gitee />
     </Layout>
@@ -32,25 +32,32 @@ function Home() {
 }
 
 function Banner() {
+
+  const { colorMode, setLightTheme, setDarkTheme } = useColorMode();
+  const isDarkTheme = colorMode === "dark";
+
   return (
-    <div className="ThingsGateway-banner">
+    <div className={"ThingsGateway-banner" + (isDarkTheme ? " dark" : "")}>
       <div className="ThingsGateway-banner-container">
         <div className="ThingsGateway-banner-item">
           <div className="ThingsGateway-banner-project">
-            ThingsGateway{" "}
-            <span
-              style={{ fontSize: 14, fontWeight: "normal", color: "#8759ff" }}
-            ></span>
+            <span style={{ fontSize: 20, fontWeight: "Blod", color: "#FFFFFF" }}>
+              ThingsGateway
+            </span>
           </div>
           <div style={{ color: "#82aaff", position: "relative", fontSize: 14 }}>
             基于NetCore的跨平台物联网关。
           </div>
-          <div className="ThingsGateway-banner-description">
+          <div className={"ThingsGateway-banner-description"+ (isDarkTheme ? " dark" : "")}>
             不只是心血来潮，更是持之以恒
           </div>
           <ul className="ThingsGateway-banner-spec">
             <li> Apache-2.0 宽松开源协议，商业免费授权</li>
-            <li>支持 .NET/6/7+</li>
+            <li>
+              底层驱动库 支持 .NET Framework 4.5及以上，.NET Standard2.0及以上
+            </li>
+            <li>网关 支持 .NET 6/7/8</li>
+            <li>极速上手，极简使用</li>
           </ul>
           <div className="ThingsGateway-support-platform">受支持平台：</div>
           <div className="ThingsGateway-support-icons">
@@ -74,13 +81,13 @@ function Banner() {
             </span>
           </div>
           <div className="ThingsGateway-get-start-btn">
-            <Link className="ThingsGateway-get-start" to={useBaseUrl("docs")}>
+            <Link className="ThingsGateway-get-start" to={useBaseUrl("docs/")}>
               入门指南
-              <span className="ThingsGateway-version">v2.0.0</span>
+              <span className="ThingsGateway-version">v5.0</span>
             </Link>
           </div>
         </div>
-
+       
       </div>
     </div>
   );
@@ -107,7 +114,7 @@ function Gitee() {
             className={"ThingsGateway-log-jiao" + (isDarkTheme ? " dark" : "")}
           ></div>
           <div className="ThingsGateway-log-number">
-            <div style={{ color: "#723cff" }}>400 +</div>
+            <div style={{ color: "#723cff" }}>650 +</div>
             <span className={isDarkTheme ? " dark" : ""}>Stars</span>
           </div>
         </div>
@@ -119,7 +126,7 @@ function Gitee() {
             className={"ThingsGateway-log-jiao" + (isDarkTheme ? " dark" : "")}
           ></div>
           <div className="ThingsGateway-log-number">
-            <div style={{ color: "#3fbbfe" }}>100 +</div>
+            <div style={{ color: "#3fbbfe" }}>150 +</div>
             <span className={isDarkTheme ? " dark" : ""}>Forks</span>
           </div>
         </div>

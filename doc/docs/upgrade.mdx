@@ -5,37 +5,52 @@ title: 历史更新
 
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import Tag from "@site/src/components/Tag.js";
+import Highlight from '@site/src/components/Highlight.js';
 
-:::tip `ThingsGateway` 框架升级/发版规则
 
-**升级前重点关注可能造成【破坏性】的标签类型**：<Tag>修复</Tag>、<Tag>调整</Tag>、<Tag>移除</Tag>、<Tag>升级</Tag>
 
-版本号规则：`主版本号.次版本号.修订版本号`
 
-- 只要【确认】为框架 `bug`，则当天修复，当天发版，修订版本号 `加 1`。
-- 如果 `.csproj` 文件有变更，则当天发版，修订版本号 `加 1`。
-- 其余情况，每年发布一个 `主版本`。
+## v5.0.0.0
 
-:::
+**更新描述：**
 
-## v3.0.0.27（已发布）
+此版本是大版本更新。可能会产生很多不兼容部分，所以升级之前请做好备份。
+
+如果需要从5.0前升级，请按以下操作进行
+
+1、导出旧版本的excel配置文件，包括采集设备、上传设备、变量等
+2、5.0框架中，只建立一个对应插件的设备/变量，这一步是因为插件是按需导出的，需要建立对应插件，才会导出相应的sheet，建好后导出excel
+3、参照5.0版本的excel内容，把旧版本的配置内容移到新版本excel文件中
+4、导入已修改好的5.0版本excel配置文件
+
+**更新详情：**
+
+- &nbsp;<Tag>调整</Tag> 重构采集驱动底层，网关缓存
+- &nbsp;<Tag>调整</Tag> 重构网关权限管理框架
+- &nbsp;<Tag>调整</Tag> 重构网关线程管理器
+- &nbsp;<Tag>调整</Tag> 重构网关断线续传功能
+- &nbsp;<Tag>调整</Tag> 重构脚本支持，方便对应各大云平台的iot格式
+- &nbsp;<Tag>调整</Tag> 调整网关UI外观风格
+
+
+## v3.0.0.27
 
 - &nbsp;<Tag>调整</Tag> 优化设备线程启停逻辑
 - &nbsp;<Tag>新增</Tag> 添加winform(blazor) demo
 - &nbsp;<Tag>优化</Tag> 部分页面显示内容优化
 
-## v3.0.0.25（已发布）
+## v3.0.0.25
 
 - &nbsp;<Tag>调整</Tag> 删除S7插件中的DstTSAP属性,用插槽号与机架号代替，更直观
 - &nbsp;<Tag>调整</Tag> OPCUAServer插件 url属性支持多个url，以逗号分割
 - &nbsp;<Tag>优化</Tag> 其他代码优化
 
-## v3.0.0.20（已发布）
+## v3.0.0.20
 
 - &nbsp;<Tag>优化</Tag> 优化ModbusServer GC频繁的问题
 
 
-## v3.0.0.19（已发布）
+## v3.0.0.19
 
 - &nbsp;<Tag>新增</Tag> 添加TDengineDB时序库上传插件
 - &nbsp;<Tag>新增</Tag> 添加QuestDB时序库上传插件
@@ -56,7 +71,7 @@ import Tag from "@site/src/components/Tag.js";
 - &nbsp;<Tag>修复</Tag> 其他bug
 
 
-## v2.0.0（已发布）
+## v2.0.0
 
 - &nbsp;<Tag>优化</Tag> 重构软件目录结构
 
@@ -65,7 +80,7 @@ import Tag from "@site/src/components/Tag.js";
 - &nbsp;<Tag>新增</Tag> 初步添加底层驱动文档
 
 
-## v1.7.0（已发布）
+## v1.7.0
 
 - &nbsp;<Tag>新增</Tag> 采集通道冗余
 
@@ -80,23 +95,18 @@ import Tag from "@site/src/components/Tag.js";
 - &nbsp;<Tag>优化</Tag> 离线缓存多处覆盖，包含上传插件/历史报警/时序库
 
 
-## v1.5.0（已发布）
+## v1.5.0
 
  - &nbsp;<Tag>新增</Tag> 添加设备是否共用通道的选项（当IP&端口一致时或者串口号一致时生效）
  
 
-## v1.3.0（已发布）
-
-  - &nbsp;<Tag>新增</Tag> 添加IotSharp插件
-
-
-## v1.2.0（已发布）
+## v1.2.0
 
   - &nbsp;<Tag>新增</Tag> 添加OPCUAServer插件
 
 ##
 
-## v1.1.0（已发布）
+## v1.1.0
 
 
   - &nbsp;<Tag>新增</Tag> 添加OPCDAClient采集插件
@@ -107,7 +117,7 @@ import Tag from "@site/src/components/Tag.js";
 
 ##
 
-## v1.0.0（已发布）
+## v1.0.0
 
   - &nbsp;<Tag>新增</Tag> 初始发布
 
