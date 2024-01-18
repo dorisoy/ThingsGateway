@@ -3,33 +3,38 @@ module.exports = {
     {
       type: "doc",
       id: "upgrade",
-      label: "01、更新日志"
+      label: "更新日志"
     },
     {
       type: "doc",
       id: "1",
-      label: "02、产品介绍"
+      label: "版权说明"
+    },
+    {
+      type: "doc",
+      id: "2",
+      label: "产品介绍"
     },
     {
       type: "category",
-      label: "03、支持作者及Pro版",
+      label: "支持作者及Pro版",
       items: [
         {
           type: "doc",
           id: "1000",
-          label: "3.1 支持作者"
+          label: "支持作者"
         },
         {
           type: "doc",
           id: "1001",
-          label: "3.2 Pro版相关"
+          label: "Pro版相关"
         },
       ]
     },
     {
       type: "doc",
-      id: "2",
-      label: "04、入门指南"
+      id: "3",
+      label: "入门指南"
     },
  
   ]

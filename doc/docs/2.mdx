@@ -1,69 +1,59 @@
 ---
 id: 2
-title: 入门指南
+title: 产品介绍
 ---
 
-import useBaseUrl from "@docusaurus/useBaseUrl";
-import Tag from "@site/src/components/Tag.js";
-import Highlight from '@site/src/components/Highlight.js';
+## 产品介绍
+
+**ThingsGateway** 是c#开发的一款边缘采集网关，核心分为四大部分，贯穿一个 工业设备数据点 从采集到上传的全周期
+
+### 通道
+
+通道，实际上相当于一个实际的通讯链路，比如一个串口，一个TCP连接等，在**ThingsGateway**中，
+通道也会作为线程池中的一个任务，对于同一个通道中的不同设备，采集/业务方法是顺序进行的。
+
+### 🔥插件
+
+ThingsGateway中的采集方法或者上传方法等都由插件完成，主程序只负责调度执行。
+对于不同的采集协议或者业务需求，可以通过开发插件完成自定义的业务操作。
+
+### 设备
+
+建立设备，必须指定通道以及插件，也可以说设备其实是插件的配置。
+同时对于采集设备、业务设备，会有些许差别。
+
+采集设备：采集数据入网关/写入数据到现场
+
+业务设备：上传数据到第三方/第三方RPC反写
+
+### 变量
+
+变量，用于配置采集设备的具体点位详情，以及对应业务设备中的配置项
 
 
-:::tip 提示
-
-如果您的开发机不是**Windows**系统，在解决方案中，可能存在一些vs生成事件脚本(目录拷贝等不支持)，会提示编译失败，请删除.csproj文件中的对应事件，手动拷贝插件类库
-
-:::
 
 
-## 一、说明
 
-**ThingsGateway** 基于NET6、7、8,默认开发IDE为VS2022(**17.8版本以上**),安装VS时需勾选ASP.NET类别.
-
-<img src={require("@site/static/img/docs/vs2022install.png").default} />
-
-## 二、下载源码
-
-[最新版本](https://gitee.com/diego2098/ThingsGateway) 
-
-## 三、编译运行
-
-下面我们将以vs2022作为示例：
-
-:::tip 提示
-
-**注意需要编译解决方案，因为插件与主体没有引用关系**
-
-:::  
+## 产品特性
 
 
-1、 vs2022打开解决方案，编译解决方案
 
-<img src={require("@site/static/img/docs/生成解决方案.png").default} />
+### 可视化操作
 
-2、 设置ThingsGateway.Web.Entry为启动项目，开始调试或开始执行
-<img src={require("@site/static/img/docs/设置启动项目.png").default} />
-<img src={require("@site/static/img/docs/开始执行.png").default} />
+通过web浏览器配置，调试，验证整个流程
 
-3、 启动后会显示登录界面
+### 🔥自定义插件支持
 
-<img src={require("@site/static/img/docs/login.png").default} />
+通过开发插件完成自定义的业务操作。
 
-:::tip 提示
+### 🔥性能
 
-测试环境下，账密会自动填充为超级管理员账号，默认账户：**superAdmin**，密码：**111111**
+测试100w变量点位，500ms-1000ms全部采集完成，稳定连续采集占用CPU资源、内存资源低
 
-:::  
+### 断线缓存
 
-## 四、使用说明
+支持断线缓存，恢复后自动上传
 
-:::tip 提示
+### 🔥完整可商用的边缘网关
 
-在查看案例前，请先查看**关于网关的基础内容**
-
-:::  
-- [文档](https://diego2098.gitee.io/thingsgateway-docs) 
-
-- [博客](https://www.cnblogs.com/ThingsGateway/collections/1104) 
-
-- [视频](https://space.bilibili.com/88105259/channel/series) 
-
+完善的配置权限，操作日志功能等，还有OPC，Web Api,Mqtt,Kafka,时序库,变量报警等更多功能等待你发现
