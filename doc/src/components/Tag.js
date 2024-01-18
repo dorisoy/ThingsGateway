@@ -45,7 +45,9 @@ export default function (props) {
     推荐: {
       bgColor: "#38e550",
     },
-
+    DEMO: {
+      bgColor: "#38e550",
+    },
     Pro版: {
       bgColor: "#23AAF2",
     }

@@ -1,0 +1,69 @@
+---
+id: startguide
+title: 入门指南
+---
+
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import Tag from "@site/src/components/Tag.js";
+import Highlight from '@site/src/components/Highlight.js';
+
+
+:::tip 提示
+
+如果您的开发机不是**Windows**系统，在解决方案中，可能存在一些vs生成事件脚本(目录拷贝等不支持)，会提示编译失败，请删除.csproj文件中的对应事件，手动拷贝插件类库
+
+:::
+
+
+## 一、说明
+
+**ThingsGateway** 基于NET6、7、8,默认开发IDE为VS2022(**17.8版本以上**),安装VS时需勾选ASP.NET类别.
+
+<img src={require("@site/static/img/docs/vs2022install.png").default} />
+
+## 二、下载源码
+
+[最新版本](https://gitee.com/diego2098/ThingsGateway) 
+
+## 三、编译运行
+
+下面我们将以vs2022作为示例：
+
+:::tip 提示
+
+**注意需要编译解决方案，因为插件与主体没有引用关系**
+
+:::  
+
+
+1、 vs2022打开解决方案，编译解决方案
+
+<img src={require("@site/static/img/docs/生成解决方案.png").default} />
+
+2、 设置ThingsGateway.Web.Entry为启动项目，开始调试或开始执行
+<img src={require("@site/static/img/docs/设置启动项目.png").default} />
+<img src={require("@site/static/img/docs/开始执行.png").default} />
+
+3、 启动后会显示登录界面
+
+<img src={require("@site/static/img/docs/login.png").default} />
+
+:::tip 提示
+
+测试环境下，账密会自动填充为超级管理员账号，默认账户：**superAdmin**，密码：**111111**
+
+:::  
+
+## 四、使用说明
+
+:::tip 提示
+
+在查看案例前，请先查看**关于网关的基础内容**
+
+:::  
+- [文档](https://diego2098.gitee.io/thingsgateway-docs) 
+
+- [博客](https://www.cnblogs.com/ThingsGateway/collections/1104) 
+
+- [视频](https://space.bilibili.com/88105259/channel/series) 
+
