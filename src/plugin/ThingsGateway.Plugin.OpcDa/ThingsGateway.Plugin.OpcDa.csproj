@@ -41,11 +41,7 @@
 
 		<ProjectReference Include="..\..\foundation\ThingsGateway.Foundation.OpcDa\src\ThingsGateway.Foundation.OpcDa.csproj" />
 
-		<ProjectReference Include="..\..\ThingsGateway.Gateway.Blazor\ThingsGateway.Gateway.Blazor.csproj">
-			<Private>false</Private>
-			<CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
-			<ExcludeAssets>runtime</ExcludeAssets>
-		</ProjectReference>
+
 	</ItemGroup>
 
 

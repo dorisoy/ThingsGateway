@@ -32,14 +32,6 @@
 		<ProjectReference Include="..\..\foundation\ThingsGateway.Foundation.Dlt645\src\ThingsGateway.Foundation.Dlt645.csproj" />
 	</ItemGroup>
 
-	<ItemGroup>
-
-		<ProjectReference Include="..\..\ThingsGateway.Gateway.Blazor\ThingsGateway.Gateway.Blazor.csproj">
-			<Private>false</Private>
-			<CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
-			<ExcludeAssets>runtime</ExcludeAssets>
-		</ProjectReference>
-	</ItemGroup>
 
 
 

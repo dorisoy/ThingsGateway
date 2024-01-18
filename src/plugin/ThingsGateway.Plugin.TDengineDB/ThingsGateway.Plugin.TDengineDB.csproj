@@ -10,13 +10,9 @@
 
 	
 	<ItemGroup>
+
 		<PackageReference Include="SqlSugar.TDengineCore" Version="4.1.6" />
 
-			<ProjectReference Include="..\..\ThingsGateway.Gateway.Blazor\ThingsGateway.Gateway.Blazor.csproj">
-			<Private>false</Private>
-			<CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
-			<ExcludeAssets>runtime</ExcludeAssets>
-		</ProjectReference>
 	</ItemGroup>
 
 

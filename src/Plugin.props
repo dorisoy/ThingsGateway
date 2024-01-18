@@ -6,4 +6,12 @@
 	<ItemGroup>
 		<None Include="$(SolutionDir)Plugin.props" Pack="true" PackagePath="\" />
 	</ItemGroup>
+
+	<ItemGroup>
+
+		<ProjectReference Include="..\..\ThingsGateway.Gateway.Blazor\ThingsGateway.Gateway.Blazor.csproj">
+			<Private>false</Private>
+			<ExcludeAssets>runtime</ExcludeAssets>
+		</ProjectReference>
+	</ItemGroup>
 </Project>

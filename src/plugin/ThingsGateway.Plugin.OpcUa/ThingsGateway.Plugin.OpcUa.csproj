@@ -43,15 +43,10 @@
 
 		<ProjectReference Include="..\..\foundation\ThingsGateway.Foundation.OpcUa\src\ThingsGateway.Foundation.OpcUa.csproj" />
 
-		<ProjectReference Include="..\..\ThingsGateway.Gateway.Blazor\ThingsGateway.Gateway.Blazor.csproj">
-			<Private>false</Private>
-			<CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
-			<ExcludeAssets>runtime</ExcludeAssets>
-		</ProjectReference>
 	</ItemGroup>
 
 	<PropertyGroup>
-		<EnableDynamicLoading>true</EnableDynamicLoading>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
 	</PropertyGroup>
 
 </Project>

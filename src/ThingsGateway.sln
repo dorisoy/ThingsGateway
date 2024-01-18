@@ -17,6 +17,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3CBF3D90-92F4-4932-8E63-19BD344B19D6}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		..\.gitignore = ..\.gitignore
 		Directory.Build.props = Directory.Build.props
 		Foundation.props = Foundation.props
 		PackNuget.props = PackNuget.props
@@ -312,7 +313,7 @@ Global
 		{96E46443-1F30-4CEB-BBD7-920DD59F1BB7} = {D43C0E54-5B4B-4F00-A782-CAB91782D284}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		RESX_NeutralResourcesLanguage = zh-Hans
 		SolutionGuid = {789BA852-9F20-4421-A555-E665A12587D1}
+		RESX_NeutralResourcesLanguage = zh-Hans
 	EndGlobalSection
 EndGlobal
