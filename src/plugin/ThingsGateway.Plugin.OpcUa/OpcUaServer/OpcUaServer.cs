@@ -31,10 +31,10 @@ namespace ThingsGateway.Plugin.OpcUa;
 /// <summary>
 /// OPCUA服务端
 /// </summary>
-public partial class OpcUaSlave : BusinessBase
+public partial class OpcUaServer : BusinessBase
 {
-    private readonly OpcUaSlaveProperty _driverPropertys = new();
-    private readonly OpcUaSlaveVariableProperty _variablePropertys = new();
+    private readonly OpcUaServerProperty _driverPropertys = new();
+    private readonly OpcUaServerVariableProperty _variablePropertys = new();
     private ApplicationInstance m_application;
     private ApplicationConfiguration m_configuration;
     private ThingsGatewayServer m_server;

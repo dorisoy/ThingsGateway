@@ -19,7 +19,7 @@ using ThingsGateway.Gateway.Application;
 namespace ThingsGateway.Plugin.OpcUa;
 
 /// <inheritdoc/>
-public class OpcUaSlaveProperty : BusinessPropertyBase
+public class OpcUaServerProperty : BusinessPropertyBase
 {
     [DynamicProperty("是否选择全部变量", "")]
     public bool IsAllVariable { get; set; } = false;
