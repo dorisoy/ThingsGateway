@@ -31,10 +31,10 @@
 
 
 	<ItemGroup>
-	  <None Update="Gateway.Development.json">
+	  <None Update="Config\Gateway.Development.json">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="Gateway.Production.json">
+	  <None Update="Config\Gateway.Production.json">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
 	  <None Update="SeedData\Json\seed_gateway_relation.json">

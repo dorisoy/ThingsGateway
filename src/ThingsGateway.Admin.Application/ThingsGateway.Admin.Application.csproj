@@ -7,10 +7,10 @@
 	</ItemGroup>
 	
 	<ItemGroup>
-	  <None Update="Job.Development.json">
+	  <None Update="Config\Job.Development.json">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="Job.Production.json">
+	  <None Update="Config\Job.Production.json">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
 	  <None Update="SeedData\Json\seed_sys_config.json">

@@ -6,9 +6,9 @@
 @namespace ThingsGateway.Components
 <MCard Height=@(Height) Elevation="0" Class="d-flex justify-center align-center rounded-0" Style=@($"background-color:inherit;width:100%;text-decoration: none;")>
     <MAvatar MinWidth=30 MinHeight=30 MaxWidth=35 MaxHeight=35 Color="teal">
-        <span class="white--text text-subtitle-1">@BlazorAppService.Title.GetNameLen2()</span>
+        <span class="white--text text-subtitle-1">@BlazorAppInfoConfigs.Current.Title.GetNameLen2()</span>
     </MAvatar>
-    <MLabel Style="background-color:inherit;" Class="primary--text text-h6 ml-1">@BlazorAppService.Title</MLabel>
+    <MLabel Style="background-color:inherit;" Class="primary--text text-h6 ml-1">@BlazorAppInfoConfigs.Current.Title</MLabel>
     </MCard>
 
 

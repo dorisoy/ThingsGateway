@@ -15,22 +15,22 @@
 	</ItemGroup>
 	
 	<ItemGroup>
-	  <None Update="Log.Development.json">
+	  <None Update="Config\Log.Development.json">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="Log.Production.json">
+	  <None Update="Config\Log.Production.json">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="Core.Development.json">
+	  <None Update="Config\Core.Development.json">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="Core.Production.json">
+	  <None Update="Config\Core.Production.json">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="Database.Development.json">
+	  <None Update="Config\Database.Development.json">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	  <None Update="Database.json">
+	  <None Update="Config\Database.json">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
 	</ItemGroup>

@@ -1,20 +1,20 @@
 ﻿@namespace ThingsGateway.Components
 @inherits Masa.Blazor.Popup.Components.PopupComponentBase
 @inject MasaBlazor MasaBlazor
-<PModal Title=@BlazorAppService.Title Value="Visible" Width=800 ValueChanged=@((a=>{if(!a)ClosePopupAsync();}))>
+<PModal Title=@BlazorAppInfoConfigs.Current.Title Value="Visible" Width=800 ValueChanged=@((a=>{if(!a)ClosePopupAsync();}))>
     <MContainer>
 
         <div>
             <div class="font-weight-black ps-1 mb-2">@I18n.T("docs")</div>
         </div>
         <div class="my-2 ml-4">
-            <a target="_blank" href="@BlazorAppService.DocsUri">@BlazorAppService.DocsUri</a>
+            <a target="_blank" href="@BlazorAppInfoConfigs.Current.DocsUri">@BlazorAppInfoConfigs.Current.DocsUri</a>
         </div>
 
         <div class="my-4">
             <div class="font-weight-black ps-1 mb-2">@I18n.T("community")</div>
             <div class="my-2 ml-4">
-                <span>QQ群</span> <a target="_blank" href="@BlazorAppService.QQGroupUri">@BlazorAppService.QQGroupNumber</a>
+                <span>QQ群</span> <a target="_blank" href="@BlazorAppInfoConfigs.Current.QQGroupUri">@BlazorAppInfoConfigs.Current.QQGroupNumber</a>
             </div>
         </div>
 

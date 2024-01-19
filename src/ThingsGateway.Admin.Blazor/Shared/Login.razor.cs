@@ -56,7 +56,7 @@ public partial class Login
         GetCaptchaInfo();
         _showCaptcha = (await _serviceScope.ServiceProvider.GetService<IConfigService>().GetByConfigKeyAsync(CateGoryConst.LOGIN_POLICY, ConfigConst.LOGIN_CAPTCHA_OPEN))?.ConfigValue?.ToBoolean(false) == true;
 
-        _welcome = "欢迎使用" + BlazorAppService.Title + "!";
+        _welcome = "欢迎使用" + BlazorAppInfoConfigs.Current.Title + "!";
         await base.OnParametersSetAsync();
     }
 

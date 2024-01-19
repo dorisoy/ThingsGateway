@@ -5,6 +5,22 @@
 	
 	<!--Admin-->
 	<ItemGroup>
+	  <None Remove="Web.Core.Development.json" />
+	  <None Remove="Web.Core.Production.json" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Include="Config\Web.Core.Development.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	  <Content Include="Config\Web.Core.Production.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	</ItemGroup>
+	<ItemGroup>
 		<ProjectReference Include="..\ThingsGateway.Admin.ApiController\ThingsGateway.Admin.ApiController.csproj" />
 		<ProjectReference Include="..\ThingsGateway.Admin.Blazor\ThingsGateway.Admin.Blazor.csproj" />
 	</ItemGroup>

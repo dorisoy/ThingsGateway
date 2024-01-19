@@ -29,39 +29,6 @@ namespace ThingsGateway.Components;
 
 public class BlazorAppService : IAsyncDisposable
 {
-    #region Logo
-
-    /// <summary>标题内容</summary>
-    public const string Title = "ThingsGateway";
-
-    /// <summary>标题内容</summary>
-    public const string Remark = "边缘采集网关";
-
-    #endregion Logo
-
-    #region 属性
-
-    /// <summary>页脚内容</summary>
-    public string FooterString => $"{I18n.T("Support", args: $"Diego")}";
-
-    /// <summary>页脚跳转</summary>
-    public const string FooterUri = "https://gitee.com/diego2098/ThingsGateway";
-
-    #endregion 属性
-
-    #region 详情页面
-
-    /// <summary>QQ群号</summary>
-    public const string QQGroupNumber = "605534569";
-
-    /// <summary>QQ群跳转</summary>
-    public const string QQGroupUri = "http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=NnBjPO-8kcNFzo_RzSbdICflb97u2O1i&authKey=V1MI3iJtpDMHc08myszP262kDykbx2Yev6ebE4Me0elTe0P0IFAmtU5l7Sy5w0jx&noverify=0&group_code=605534569";
-
-    /// <summary>文档链接</summary>
-    public const string DocsUri = "https://diego2098.gitee.io/thingsgateway-docs/";
-
-    #endregion 详情页面
-
     public const string DefaultProjectName = "ThingsGateway.Components";
 
     /// <summary>

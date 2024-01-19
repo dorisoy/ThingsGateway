@@ -15,6 +15,7 @@
 using Furion;
 
 using NewLife;
+using NewLife.Configuration;
 
 namespace ThingsGateway.Cache;
 
@@ -33,9 +34,14 @@ public class Startup : AppStartup
     {
         services.AddSingleton<ISimpleCacheService, MemoryCacheService>();
 
+        var provider = new JsonConfigProvider();
+        provider.FileName = "newlife.config.json";
+        Setting.Provider = provider;
+        Setting.Provider.Name = "newlife.config";
+        Setting.Current = new();
         Setting.Current.Debug = false;
         Setting.Current.LogLevel = NewLife.Log.LogLevel.Warn;
-        Setting.Current.PluginServer = string.Empty;
+        Setting.Current.PluginServer = "null";
         Setting.Current.ServiceAddress = string.Empty;
         Setting.Current.Save();
     }

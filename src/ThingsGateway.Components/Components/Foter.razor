@@ -4,8 +4,8 @@
 @inject BlazorAppService AppService
 @inject NavigationManager NavigationManager
 @namespace ThingsGateway.Components
-<MCard Flat Style="background-color:inherit;"  Href=@BlazorAppService.FooterUri Target="_blank">
-     <MLabel Style="background-color:inherit;" Class="text-subtltie-2">@AppService.FooterString</MLabel>
+<MCard Flat Style="background-color:inherit;" Href=@BlazorAppInfoConfigs.Current.FooterUri Target="_blank">
+     <MLabel Style="background-color:inherit;" Class="text-subtltie-2">@BlazorAppInfoConfigs.Current.FooterString</MLabel>
         <MLabel Style="background-color:inherit;white-space: pre;" Class="text-subtltie-2 ml-4">@Version</MLabel>
     </MCard>
 
