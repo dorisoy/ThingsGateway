@@ -29,10 +29,4 @@ public abstract class BusinessPropertyBase : CollectPropertyBase
     public override int RetryCount { get; set; } = 3;
 
     public override int ConcurrentCount { get; set; } = 1;
-
-    /// <summary>
-    /// 线程循环间隔
-    /// </summary>
-    [DynamicProperty("线程循环间隔", "最小500ms")]
-    public virtual int CycleInterval { get; set; } = 500;
 }
