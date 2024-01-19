@@ -446,7 +446,7 @@ public class PluginService : IPluginService
                 //先加载到内存，如果成功添加后再装载到文件
                 //获取主程序集
                 var assembly = assemblyLoadContext.LoadFromStream(memoryStream);
-                foreach (var item in plugin.OtherFiles)
+                foreach (var item in plugin.OtherFiles ?? new())
                 {
                     using var otherStream = item.OpenReadStream(maxFileSize);
                     using MemoryStream memoryStream1 = new MemoryStream();

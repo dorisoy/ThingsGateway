@@ -29,6 +29,11 @@ public partial class PluginPage
     [Inject]
     private IPluginService PluginService { get; set; }
 
+    private async Task AddCallAsync(PluginAddInput input)
+    {
+        await PluginService.AddAsync(input);
+    }
+
     private async Task<SqlSugarPagedList<PluginOutput>> QueryCallAsync(PluginPageInput input)
     {
         await Task.CompletedTask;

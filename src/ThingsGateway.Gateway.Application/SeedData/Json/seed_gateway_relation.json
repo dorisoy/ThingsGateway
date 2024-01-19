@@ -369,7 +369,7 @@
       "Category": "SYS_ROLE_HAS_RESOURCE",
       "ObjectId": 212725263001002,
       "TargetId": "200001003",
-      "ExtJson": "{\"MenuId\":200001003,\"ButtonInfo\":[502957047287877]}"
+      "ExtJson": "{\"MenuId\":200001003,\"ButtonInfo\":[502957047287877,505731927740485]}"
     },
     {
       "Id": 503224107855978,

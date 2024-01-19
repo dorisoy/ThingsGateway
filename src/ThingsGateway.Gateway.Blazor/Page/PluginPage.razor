@@ -15,16 +15,17 @@
 
 
 <AppDataTable @ref="_datatable" TItem="PluginOutput" SearchItem="PluginPageInput"
-              AddItem="object" EditItem="object" IsShowSelect=false
+              AddItem="PluginAddInput" EditItem="object" IsShowSelect=false
               SearchModel="@_search" IsShowOperCol=true
-              QueryCallAsync="QueryCallAsync"
-                IsShowDetailButton IsShowQueryButton IsShowSearchKey>
-    <SearchTemplate>
+              QueryCallAsync="QueryCallAsync" AddCallAsync="AddCallAsync"
+              IsShowDetailButton IsShowQueryButton IsShowSearchKey IsShowAddButton=@UserResoures.IsHasButtonWithRole("GatewayPluginAdd")>
 
-        <MSelect Class="my-1 mx-2 " Items=@(typeof(PluginTypeEnum).GetEnumList()) Style="max-width:300px;"
-                 @bind-Value=@context.PluginType Label=@(context.Description(x => x.PluginType))
-                 MenuProps="@(props => { props.Auto = true; props.OffsetY = true; })"
-                 ItemText=@(u =>u.Description) Clearable
+     <SearchTemplate>
+
+         <MSelect Class="my-1 mx-2 " Items=@(typeof(PluginTypeEnum).GetEnumList()) Style="max-width:300px;"
+                  @bind-Value=@context.PluginType Label=@(context.Description(x => x.PluginType))
+                  MenuProps="@(props => { props.Auto = true; props.OffsetY = true; })"
+                  ItemText=@(u =>u.Description) Clearable
                   ItemValue=@(u =>(PluginTypeEnum)u.Value)
                   Dense HideDetails=@("auto")
                   Outlined></MSelect>
@@ -39,6 +40,35 @@
 
 
      </SearchTemplate>
+
+     <AddTemplate>
+         <MCard Style="min-height:500px;" Flat Elevation="0" Class="ma-5">
+             <MContainer>
+                 <MRow Justify="JustifyTypes.Start" Align="AlignTypes.Center">
+
+                     <MCol Md=12 Sm=12>
+                         <MSubheader Class="mt-4 red--text">   注意：文件名称相同的插件将被覆盖 </MSubheader>
+                     </MCol>
+                     <MCol Md=12 Sm=12>
+                         <MSubheader Class="font-weight-black">    @(context.Description(x => x.MainFile))  </MSubheader>
+                     </MCol>
+                     <MCol Md=12 Sm=12>
+                         <MFileInput @bind-Value="context.MainFile" ShowSize Accept=".dll"></MFileInput>
+                     </MCol>
+                     <MCol Md=12 Sm=12>
+                         <MSubheader Class="mt-4 font-weight-black">    @(context.Description(x => x.OtherFiles))  </MSubheader>
+                     </MCol>
+                     <MCol Md=12 Sm=12>
+                         <MFileInput @bind-Value="context.OtherFiles" ShowSize Multiple Counter=true Accept=".dll"></MFileInput>
+                     </MCol>
+                 </MRow>
+             </MContainer>
+         </MCard>
+
+
+     </AddTemplate>
+
+
      <OtherToolbarTemplate>
          <MButton Disabled=@(!UserResoures.IsHasButtonWithRole("GatewayPluginCheck")) Color="primary" Class="mx-2 my-1" OnClick=Remove>@AppService.I18n.T("重新检测文件")</MButton>
         </OtherToolbarTemplate>

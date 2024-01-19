@@ -25,12 +25,6 @@ namespace ThingsGateway.Gateway.Application;
 public class PluginAddInput
 {
     /// <summary>
-    /// 文件名称
-    /// </summary>
-    [Description("文件名称")]
-    public string FileName { get; set; }
-
-    /// <summary>
     /// 主程序集
     /// </summary>
     [Description("主程序集")]

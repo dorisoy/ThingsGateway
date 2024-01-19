@@ -361,6 +361,27 @@
       "ExtJson": null
     },
     {
+      "Id": 505731927740485,
+      "ParentId": 200001003,
+      "Title": "添加插件",
+      "Code": "GatewayPluginAdd",
+      "Category": "BUTTON",
+      "MenuType": "0",
+      "Href": null,
+      "Icon": null,
+      "Hidden": "0",
+      "CreateTime": "11/1/2024 15:17:29.893",
+      "CreateUser": "superAdmin",
+      "CreateUserId": 212725263002001,
+      "IsDelete": "0",
+      "UpdateTime": null,
+      "UpdateUser": null,
+      "UpdateUserId": null,
+      "SortCode": 0,
+      "ExtJson": null
+    },
+
+    {
       "Id": 502957141917765,
       "ParentId": 200001005,
       "Title": "新增变量",
