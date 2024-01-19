@@ -47,7 +47,7 @@ public abstract class BusinessBase : DriverBase
             GlobalData.BusinessDevices.RemoveWhere(it => it.Id == device.Id);
             GlobalData.BusinessDevices.Add(CurrentDevice);
         }
-        if (device.IntervalTime <= 500) device.IntervalTime = 500;
+        if (device.IntervalTime <= 50) device.IntervalTime = 50;
     }
 
     public override async Task AfterStopAsync()

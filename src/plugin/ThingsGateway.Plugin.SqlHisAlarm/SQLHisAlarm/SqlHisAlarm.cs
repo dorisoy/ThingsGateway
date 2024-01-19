@@ -63,7 +63,7 @@ public partial class SqlHisAlarm : BusinessBaseWithCacheT<HistoryAlarm>
     {
         await Update(cancellationToken);
 
-        await Delay(_driverPropertys.CycleInterval, cancellationToken);
+        await Delay(CurrentDevice.IntervalTime, cancellationToken);
     }
 
     protected override void Dispose(bool disposing)

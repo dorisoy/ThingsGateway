@@ -25,7 +25,7 @@ namespace ThingsGateway.Gateway.Application;
 public abstract class CollectPropertyBase
 {
     /// <summary>
-    /// 离线后恢复运行的间隔时间 /s，默认300s
+    /// 离线后恢复运行的间隔时间 /s，默认30s
     /// </summary>
     [DynamicProperty("离线恢复间隔", "离线后恢复运行的间隔时间s，默认30s，最大600s")]
     public virtual int ReIntervalTime { get; set; } = 30;

@@ -95,11 +95,11 @@ public class FoundationConst
     public const string DefaultAddressDes =
         """
         ————————————————————
-        4字节数据转换格式：dataformat=ABCD;可选ABCD=>Big-Endian;BADC=>;Big-Endian Byte Swap;CDAB=>Little-Endian Byte Swap;DCBA=>Little-Endian。
-        字符串长度：stringLength=1。
-        数组长度：length=1。只在连读时生效
-        Bcd格式：bcdFormat=C8421，可选C8421;C5421;C2421;C3;Gray。
-        字符格式：encoding=UTF-8，可选UTF-8;ASCII;Default;Unicode。
+        4字节数据转换格式：data=ABCD;可选ABCD=>Big-Endian;BADC=>;Big-Endian Byte Swap;CDAB=>Little-Endian Byte Swap;DCBA=>Little-Endian。
+        字符串长度：len=1。
+        数组长度：arraylen=1。只在打包连读时生效
+        Bcd格式：bcd=C8421，可选C8421;C5421;C2421;C3;Gray。
+        字符格式：encoding=UTF-8，可选UTF-8;ASCII;Default;Unicode等。
         ————————————————————
         """;
 

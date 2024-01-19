@@ -50,7 +50,6 @@ public class ModbusMaster : CollectBase
             Station = _driverPropertys.Station,
             Timeout = _driverPropertys.Timeout,
             CheckClear = _driverPropertys.CheckClear,
-            IsCheck = _driverPropertys.IsCheck,
             ModbusType = _driverPropertys.ModbusType,
         };
         base.Init(channel);

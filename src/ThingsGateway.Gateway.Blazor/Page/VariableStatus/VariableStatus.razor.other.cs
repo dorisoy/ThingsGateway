@@ -84,9 +84,10 @@ public partial class VariableStatus
     {
         // 将异步方法添加到事件回调上
         var onWrite = EventCallback.Factory.Create<string>(this, value => OnWriteValueAsync(variableRunTime, value));
+        var data = variableRunTime.Value?.ToString();
         await PopupService.OpenAsync(typeof(WriteValue), new Dictionary<string, object?>()
         {
-            { nameof(WriteValue.Content), variableRunTime.Value?.ToString() },
+            { nameof(WriteValue.Content), data=="0"?"":data },
             { nameof(WriteValue.OnSave), onWrite }
         });
     }

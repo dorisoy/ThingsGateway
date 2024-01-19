@@ -148,7 +148,7 @@ public partial class OpcUaServer : BusinessBase
             success = false;
         }
 
-        await Delay(_driverPropertys.CycleInterval, cancellationToken);
+        await Delay(CurrentDevice.IntervalTime, cancellationToken);
     }
 
     private ApplicationConfiguration GetDefaultConfiguration()

@@ -75,6 +75,6 @@ public partial class QuestDBProducer : BusinessBaseWithCacheInterval<QuestDBHist
 
         await UpdateTCache(cancellationToken);
 
-        await Delay(_driverPropertys.CycleInterval, cancellationToken);
+        await Delay(CurrentDevice.IntervalTime, cancellationToken);
     }
 }

@@ -72,10 +72,4 @@ public class ModbusSlaveProperty : BusinessPropertyBase
     /// </summary>
     [DynamicProperty("立即写入内存", "")]
     public bool IsWriteMemory { get; set; }
-
-    /// <summary>
-    /// 线程循环间隔
-    /// </summary>
-    [DynamicProperty("线程循环间隔", "最小50ms")]
-    public override int CycleInterval { get; set; } = 50;
 }

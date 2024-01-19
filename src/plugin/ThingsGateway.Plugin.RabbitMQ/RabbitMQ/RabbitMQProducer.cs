@@ -100,6 +100,6 @@ public partial class RabbitMQProducer : BusinessBaseWithCacheIntervalScript<Vari
             await Update(cancellationToken);
         }
 
-        await Delay(_driverPropertys.CycleInterval, cancellationToken);
+        await Delay(CurrentDevice.IntervalTime, cancellationToken);
     }
 }

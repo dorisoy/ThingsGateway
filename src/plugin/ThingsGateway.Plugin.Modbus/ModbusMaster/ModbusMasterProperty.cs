@@ -52,13 +52,13 @@ public class ModbusMasterProperty : CollectPropertyBase
     /// <summary>
     /// 帧前时间ms
     /// </summary>
-    [DynamicProperty("发送延时时间ms", "某些设备性能较弱，报文间需要间隔较长时间")]
+    [DynamicProperty("发送延时时间", "某些设备性能较弱，报文间需要间隔较长时间")]
     public int SendDelayTime { get; set; } = 0;
 
     /// <summary>
     /// 组包缓存超时ms
     /// </summary>
-    [DynamicProperty("组包缓存超时ms", "某些设备性能较弱，报文间需要间隔较长时间，可以设置更长的组包缓存，默认1000ms")]
+    [DynamicProperty("组包缓存超时", "某些设备性能较弱，报文间需要间隔较长时间，可以设置更长的组包缓存，默认1000ms")]
     public int CacheTimeout { get; set; } = 1000;
 
     /// <summary>
@@ -72,10 +72,4 @@ public class ModbusMasterProperty : CollectPropertyBase
     /// </summary>
     [DynamicProperty("最大打包长度", "")]
     public ushort MaxPack { get; set; } = 100;
-
-    /// <summary>
-    /// Crc检测
-    /// </summary>
-    [DynamicProperty("Crc检测", "Rtu格式特有")]
-    public bool IsCheck { get; set; }
 }

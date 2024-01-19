@@ -109,12 +109,12 @@ public partial class MqttClient : BusinessBaseWithCacheIntervalScript<VariableDa
                     LogMessage.LogWarning(clientResult.Exception, clientResult.ErrorMessage);
                 success = clientResult.IsSuccess;
             }
-            await Delay(_driverPropertys.CycleInterval, cancellationToken);
+            await Delay(CurrentDevice.IntervalTime, cancellationToken);
             return;
         }
 
         await Update(cancellationToken);
 
-        await Delay(_driverPropertys.CycleInterval, cancellationToken);
+        await Delay(CurrentDevice.IntervalTime, cancellationToken);
     }
 }

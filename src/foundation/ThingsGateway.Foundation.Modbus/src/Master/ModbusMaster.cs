@@ -66,11 +66,6 @@ public class ModbusMaster : ProtocolBase
     }
 
     /// <summary>
-    /// 是否校验Crc
-    /// </summary>
-    public bool IsCheck { get; set; }
-
-    /// <summary>
     /// 站号
     /// </summary>
     public byte Station { get; set; } = 1;
@@ -151,14 +146,12 @@ public class ModbusMaster : ProtocolBase
                     case ChannelTypeEnum.SerialPortClient:
                         return new ModbusRtuDataHandleAdapter()
                         {
-                            IsCheckCrc16 = IsCheck,
                             CacheTimeout = TimeSpan.FromMilliseconds(CacheTimeout)
                         };
 
                     case ChannelTypeEnum.UdpSession:
                         return new ModbusRtuOverUdpDataHandleAdapter()
                         {
-                            IsCheckCrc16 = IsCheck,
                         };
                 }
                 break;

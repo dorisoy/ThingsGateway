@@ -97,7 +97,6 @@ public class ModbusSlave : BusinessBase
             return address;
         });
         _plc.WriteData += OnWriteData;
-        if (_businessPropertyBase.CycleInterval <= 50) _businessPropertyBase.CycleInterval = 50;
     }
 
     protected override async Task ProtectedExecuteAsync(CancellationToken cancellationToken)

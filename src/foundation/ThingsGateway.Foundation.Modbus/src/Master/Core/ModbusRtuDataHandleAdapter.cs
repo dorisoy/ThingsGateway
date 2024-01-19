@@ -21,11 +21,6 @@ namespace ThingsGateway.Foundation.Modbus;
 /// </summary>
 internal class ModbusRtuDataHandleAdapter : ReadWriteDevicesSingleStreamDataHandleAdapter<ModbusRtuMessage>
 {
-    /// <summary>
-    /// 检测CRC
-    /// </summary>
-    public bool IsCheckCrc16 { get; set; } = true;
-
     /// <inheritdoc/>
     public override byte[] PackCommand(byte[] command, ModbusRtuMessage item)
     {
@@ -59,7 +54,7 @@ internal class ModbusRtuDataHandleAdapter : ReadWriteDevicesSingleStreamDataHand
             }
 
             //理想状态检测
-            var result = ModbusHelper.GetModbusRtuData(send, response, IsCheckCrc16);
+            var result = ModbusHelper.GetModbusRtuData(send, response, true);
             request.OperCode = result.OperCode;
             request.ErrorMessage = result.ErrorMessage;
             if (result.IsSuccess)
