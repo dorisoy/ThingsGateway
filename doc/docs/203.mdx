@@ -17,11 +17,16 @@ SiemensS7Master作为主站，主动采集西门子S7协议的设备
 
 ## 二、插件属性配置项
 
-<img src={require("@site/static/img/docs/Dlt645Master.png").default} />
+<img src={require("@site/static/img/docs/SiemensS7Master.png").default} />
 
 | 属性           |  说明                    | 备注|
 | ---------------| --------------------------| ---|
-| 无交互2min时断开连接         |  没有发送/收到消息 ，2分钟后断开连接             | 仅适用于TcpService链路（DTU模式）|
+| S7类型         | S200;S200SMART;S300;S400;S1200;S1500;           | |
+
+| 机架号         |   机架号            | 0|
+| 槽位号         |   槽位号            | 0|
+| LocalTSAP         |  查看西门子localTsap说明，网关中一般不需要再设置             | 0 |
+
 | 读写超时时间         | 读写超时时间                | 3000|
 | 连接超时时间         | 建立通讯链路的超时时间                | 3000|
 | 发送延时时间         | 在发送请求前的延时时间               | 0|

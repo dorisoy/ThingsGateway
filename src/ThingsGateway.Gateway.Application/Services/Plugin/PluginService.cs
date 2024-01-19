@@ -510,14 +510,14 @@ public class PluginService : IPluginService
     private static T GetCustomAttributeRecursive<T>(PropertyInfo property) where T : Attribute
     {
         var attribute = property.GetCustomAttribute<T>(false);
-        if (attribute == null && property.ReflectedType.BaseType != null && property.ReflectedType != typeof(BusinessPropertyBase))
-        {
-            var baseProperty = property.ReflectedType.BaseType.GetProperties().FirstOrDefault(p => p.Name == property.Name);
-            if (baseProperty != null)
-            {
-                attribute = GetCustomAttributeRecursive<T>(baseProperty);
-            }
-        }
+        //if (attribute == null && property.ReflectedType.BaseType != null && property.ReflectedType != typeof(BusinessPropertyBase))
+        //{
+        //    var baseProperty = property.ReflectedType.BaseType.GetProperties().FirstOrDefault(p => p.Name == property.Name);
+        //    if (baseProperty != null)
+        //    {
+        //        attribute = GetCustomAttributeRecursive<T>(baseProperty);
+        //    }
+        //}
         return attribute;
     }
 

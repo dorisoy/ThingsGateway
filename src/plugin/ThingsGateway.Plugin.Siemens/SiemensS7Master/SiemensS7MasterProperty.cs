@@ -69,4 +69,6 @@ public class SiemensS7MasterProperty : CollectPropertyBase
     /// </summary>
     [DynamicProperty("默认解析顺序", "")]
     public DataFormatEnum DataFormat { get; set; }
+
+    public override int ConcurrentCount { get; set; } = 1;
 }
