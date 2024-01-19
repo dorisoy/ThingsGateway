@@ -103,7 +103,17 @@ module.exports = {
           label: "SiemensS7Master"
         },
 
+        {
+          type: "doc",
+          id: "204",
+          label: "OpcDaMaster"
+        },
 
+        {
+          type: "doc",
+          id: "205",
+          label: "OpcUaMaster"
+        },
 
 
       ]
