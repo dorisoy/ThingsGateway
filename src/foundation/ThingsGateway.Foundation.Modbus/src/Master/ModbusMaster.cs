@@ -180,7 +180,7 @@ public class ModbusMaster : ProtocolBase
     {
         try
         {
-            var commandResult = ModbusHelper.GetReadModbusCommand(address, length, Station);
+            var commandResult = ModbusHelper.GetReadModbusCommand(address, (ushort)length, Station);
 
             return SendThenReturn(address, commandResult, cancellationToken);
         }
@@ -209,7 +209,7 @@ public class ModbusMaster : ProtocolBase
     {
         try
         {
-            var commandResult = ModbusHelper.GetReadModbusCommand(address, length, Station);
+            var commandResult = ModbusHelper.GetReadModbusCommand(address, (ushort)length, Station);
             return await SendThenReturnAsync(address, commandResult, cancellationToken);
         }
         catch (Exception ex)
@@ -255,7 +255,7 @@ public class ModbusMaster : ProtocolBase
             //功能码或实际长度
             if (value.Length > 1 || mAddress.WriteFunction == 15)
             {
-                var commandResult = ModbusHelper.GetWriteBoolModbusCommand(mAddress, value, value.Length);
+                var commandResult = ModbusHelper.GetWriteBoolModbusCommand(mAddress, value, (ushort)value.Length);
                 return SendThenReturn(address, commandResult, cancellationToken);
             }
             else
@@ -312,7 +312,7 @@ public class ModbusMaster : ProtocolBase
             //功能码或实际长度
             if (value.Length > 1 || mAddress.WriteFunction == 15)
             {
-                var commandResult = ModbusHelper.GetWriteBoolModbusCommand(mAddress, value, value.Length);
+                var commandResult = ModbusHelper.GetWriteBoolModbusCommand(mAddress, value, (ushort)value.Length);
                 return await SendThenReturnAsync(address, commandResult, cancellationToken);
             }
             else

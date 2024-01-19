@@ -242,7 +242,7 @@ internal class ModbusHelper
     /// <summary>
     /// 获取读取报文
     /// </summary>
-    internal static byte[] GetReadModbusCommand(string address, int length, byte station)
+    internal static byte[] GetReadModbusCommand(string address, ushort length, byte station)
     {
         var mAddress = ModbusAddressHelper.ParseFrom(address, station);
         return GetReadModbusCommand(mAddress, length);
@@ -267,7 +267,7 @@ internal class ModbusHelper
     /// <summary>
     /// 获取读取报文
     /// </summary>
-    internal static byte[] GetReadModbusCommand(ModbusAddress mAddress, int length)
+    internal static byte[] GetReadModbusCommand(ModbusAddress mAddress, ushort length)
     {
         byte[] array = new byte[6]
         {
@@ -311,7 +311,7 @@ internal class ModbusHelper
     /// <summary>
     /// 获取15写入布尔量报文
     /// </summary>
-    internal static byte[] GetWriteBoolModbusCommand(ModbusAddress mAddress, bool[] values, int length)
+    internal static byte[] GetWriteBoolModbusCommand(ModbusAddress mAddress, bool[] values, ushort length)
     {
         byte[] numArray1 = values.BoolArrayToByte();
         byte[] numArray2 = new byte[7 + numArray1.Length];
