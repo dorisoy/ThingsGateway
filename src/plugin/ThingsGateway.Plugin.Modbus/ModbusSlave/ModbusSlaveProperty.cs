@@ -26,16 +26,16 @@ public class ModbusSlaveProperty : BusinessPropertyBase
     public ModbusTypeEnum ModbusType { get; set; }
 
     /// <summary>
-    /// 默认解析顺序
-    /// </summary>
-    [DynamicProperty("默认解析顺序", "")]
-    public DataFormatEnum DataFormat { get; set; }
-
-    /// <summary>
     /// 默认站号
     /// </summary>
     [DynamicProperty("默认站号", "")]
     public byte Station { get; set; } = 1;
+
+    /// <summary>
+    /// 默认解析顺序
+    /// </summary>
+    [DynamicProperty("默认解析顺序", "")]
+    public DataFormatEnum DataFormat { get; set; }
 
     /// <summary>
     /// 无交互2min时断开连接
@@ -52,7 +52,7 @@ public class ModbusSlaveProperty : BusinessPropertyBase
     /// <summary>
     /// 组包缓存超时ms
     /// </summary>
-    [DynamicProperty("组包缓存超时ms", "某些设备性能较弱，报文间需要间隔较长时间，可以设置更长的组包缓存，默认1000ms")]
+    [DynamicProperty("组包缓存超时", "某些设备性能较弱，报文间需要间隔较长时间，可以设置更长的组包缓存，默认1000ms")]
     public int CacheTimeout { get; set; } = 1000;
 
     /// <summary>
