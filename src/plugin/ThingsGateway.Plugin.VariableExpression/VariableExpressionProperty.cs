@@ -30,4 +30,6 @@ public class VariableExpressionProperty : CollectPropertyBase
     /// 失败重试次数，默认3
     /// </summary>
     public override int RetryCount { get; set; } = 3;
+
+    public override int ConcurrentCount { get; set; } = 1;
 }
