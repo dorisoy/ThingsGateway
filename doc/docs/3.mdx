@@ -61,6 +61,8 @@ import Highlight from '@site/src/components/Highlight.js';
 
 ## 四、建立一个完整的流程
 
+下面举例说明 采集ModbusTcp设备中的寄存器，通过MqttServer发布 的具体流程
+
 ### 1、建立通道
 <img src={require("@site/static/img/docs/通道配置.png").default} />
 <img src={require("@site/static/img/docs/通道配置1.png").default} />
@@ -108,7 +110,7 @@ import Highlight from '@site/src/components/Highlight.js';
 
 <img src={require("@site/static/img/docs/实时数据.png").default} />
 
-可以看到值与采集时间等等的变化，注意这里的页面变化是1s的间隔时间，如果配置了采集间隔小于1s，页面刷新不及时是正常的，不影响业务上传
+可以看到值与采集时间等等的变化，注意这里的页面实时值变化是1s的间隔时间，如果配置了采集间隔小于1s，页面刷新不及时是正常的，不影响业务上传
 
 MqttServer的日志也可以在运行状态中看到
 <img src={require("@site/static/img/docs/运行状态4.png").default} />
