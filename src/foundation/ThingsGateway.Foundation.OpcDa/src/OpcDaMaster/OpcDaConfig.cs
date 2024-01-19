@@ -40,9 +40,9 @@ public class OpcDaConfig
     public float DeadBand { get; set; } = 0;
 
     /// <summary>
-    /// 分组大小
+    /// 最大组大小
     /// </summary>
-    [Description("分组大小")]
+    [Description("最大组大小")]
     public int GroupSize { get; set; } = 500;
 
     /// <summary>

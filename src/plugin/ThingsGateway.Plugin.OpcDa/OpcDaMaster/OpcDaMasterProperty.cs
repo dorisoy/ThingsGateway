@@ -47,12 +47,14 @@ public class OpcDaMasterProperty : CollectPropertyBase
     [DynamicProperty("死区", "")] public float DeadBand { get; set; } = 0;
 
     /// <summary>
-    /// 自动分组大小
+    /// 最大组大小
     /// </summary>
-    [DynamicProperty("自动分组大小", "")] public int GroupSize { get; set; } = 500;
+    [DynamicProperty("最大组大小", "")] public int GroupSize { get; set; } = 500;
 
     /// <summary>
     /// 更新频率
     /// </summary>
     [DynamicProperty("更新频率", "")] public int UpdateRate { get; set; } = 1000;
+
+    public override int ConcurrentCount { get; set; } = 1;
 }

@@ -31,13 +31,13 @@ public class OpcUaMasterProperty : CollectPropertyBase
     /// 登录账号
     /// </summary>
     [DynamicProperty("登录账号", "为空时将采用匿名方式登录")]
-    public string UserName { get; set; }
+    public string? UserName { get; set; }
 
     /// <summary>
     /// 登录密码
     /// </summary>
     [DynamicProperty("登录密码", "")]
-    public string Password { get; set; }
+    public string? Password { get; set; }
 
     /// <summary>
     /// 检查域
@@ -92,4 +92,6 @@ public class OpcUaMasterProperty : CollectPropertyBase
     /// </summary>
     [DynamicProperty("心跳频率", "")]
     public int KeepAliveInterval { get; set; } = 3000;
+
+    public override int ConcurrentCount { get; set; } = 1;
 }

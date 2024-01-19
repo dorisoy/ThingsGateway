@@ -860,7 +860,8 @@ public class OpcUaMaster : IDisposable
             userIdentity = new UserIdentity(new AnonymousIdentityToken());
         }
         //创建本地证书
-        await m_application.CheckApplicationInstanceCertificate(true, 0, 1200);
+        if (useSecurity)
+            await m_application.CheckApplicationInstanceCertificate(true, 0, 1200);
         m_session = await Opc.Ua.Client.Session.Create(
         m_configuration,
         endpoint,
