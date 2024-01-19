@@ -115,7 +115,11 @@ module.exports = {
           label: "OpcUaMaster"
         },
 
-
+        {
+          type: "doc",
+          id: "206",
+          label: "VariableExpression"
+        },
       ]
     },
 
