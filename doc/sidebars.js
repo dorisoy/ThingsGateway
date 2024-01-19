@@ -78,7 +78,6 @@ module.exports = {
           type: "category",
           label: "Modbus",
           items: [
-
             {
               type: "doc",
               id: "200",
@@ -92,6 +91,11 @@ module.exports = {
           ]
         },
 
+        {
+          type: "doc",
+          id: "202",
+          label: "Dlt645Master"
+        },
       ]
     },
 

@@ -59,6 +59,45 @@ import Highlight from '@site/src/components/Highlight.js';
 
 :::
 
+:::tip `变量地址通用说明`
+
+通用格式，不区分大小写
+
+4字节转换格式
+
+DATA=ABCD;
+
+举例：
+
+DATA=ABCD; ，代表大端格式，其中
+
+ABCD=>Big-Endian;
+
+BADC=>Big-Endian Byte Swap;
+
+CDAB=>Little-Endian Byte Swap;
+
+DCBA=>Little-Endian
+
+字符串长度：
+
+LEN=1;
+
+BCD格式：
+
+BCD=C8421;，其中有C8421;C5421;C2421;C3;Gray
+
+字符格式：
+
+encoding=UTF8;，其中有UTF8;ASCII;Default;Unicode
+
+数组长度：
+
+arraylen=2;
+
+:::
+
+
 ### 报警属性配置项
 
 <img src={require("@site/static/img/docs/添加变量1.png").default} />
