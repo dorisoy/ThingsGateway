@@ -31,7 +31,7 @@ namespace ThingsGateway.Foundation
                   Debug.WriteLine($"{DateTimeUtil.Now.ToString("yyyy-MM-dd HH:mm:ss fff")} - {message} {exception}");
               });
             //创建通道，也可以通过TouchSocketConfig.GetChannel扩展获取
-            var clientChannel = clientConfig.GetTcpClientWithIPHost("tcp://127.0.0.1");
+            var clientChannel = clientConfig.GetTcpClientWithIPHost("tcp://127.0.0.1:502");
 
             //创建modbus客户端，传入通道
             using ModbusMaster modbusMaster = new(clientChannel)
@@ -41,8 +41,17 @@ namespace ThingsGateway.Foundation
                 ModbusType = Modbus.ModbusTypeEnum.ModbusTcp,
             };
 
-            //读写对应数据类型
-            var result = await modbusMaster.ReadInt32Async("40001", 1);
+            //测试5千次
+            for (int i = 0; i < 5000; i++)
+            {
+                //读写对应数据类型
+                var result = await modbusMaster.ReadInt32Async("40001", 1);
+                if (!result.IsSuccess)
+                {
+                    Console.WriteLine(result);
+                }
+            }
+
             var wResult = await modbusMaster.WriteAsync("40001", 1);
 
             //动态类型读写
