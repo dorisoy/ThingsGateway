@@ -75,20 +75,9 @@ module.exports = {
       label: "插件手册",
       items: [
         {
-          type: "category",
-          label: "Modbus",
-          items: [
-            {
-              type: "doc",
-              id: "200",
-              label: "ModbusMaster"
-            },
-            {
-              type: "doc",
-              id: "201",
-              label: "ModbusSlave"
-            },
-          ]
+          type: "doc",
+          id: "200",
+          label: "ModbusMaster"
         },
 
         {
@@ -120,9 +109,65 @@ module.exports = {
           id: "206",
           label: "VariableExpression"
         },
+
+        {
+          type: "doc",
+          id: "201",
+          label: "ModbusSlave"
+        },
+        {
+          type: "doc",
+          id: "301",
+          label: "MqttClient"
+        },
+        {
+          type: "doc",
+          id: "302",
+          label: "MqttServer"
+        },
+        {
+          type: "doc",
+          id: "302",
+          label: "RabbitMQProducer"
+        },
+        {
+          type: "doc",
+          id: "303",
+          label: "KafkaProducer"
+        },
+        {
+          type: "doc",
+          id: "304",
+          label: "TDengineDBProducer"
+        },
+
+        {
+          type: "doc",
+          id: "305",
+          label: "SqlDBProducer"
+        },
+        {
+          type: "doc",
+          id: "306",
+          label: "QuestDBProducer"
+        },
+        {
+          type: "doc",
+          id: "307",
+          label: "SqlHisAlarm"
+        },
+
       ]
     },
 
+    {
+      type: "category",
+      label: "Pro版本插件手册",
+      items: [
+       
+
+      ]
+    },
 
     {
       type: "category",
