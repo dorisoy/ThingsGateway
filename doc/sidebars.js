@@ -96,6 +96,16 @@ module.exports = {
           id: "202",
           label: "Dlt645Master"
         },
+
+        {
+          type: "doc",
+          id: "203",
+          label: "SiemensS7Master"
+        },
+
+
+
+
       ]
     },
 
