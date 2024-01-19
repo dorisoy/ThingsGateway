@@ -404,7 +404,7 @@ public class ThingsGatewayNodeManager : CustomNodeManager2
     /// <returns></returns>
     private NodeId DataNodeType(VariableRunTime variableRunTime)
     {
-        var str = variableRunTime.GetPropertyValue(_businessBase.DeviceId, nameof(OpcUaSlaveVariableProperty.DataTypeEnum))?.Value ?? "";
+        var str = variableRunTime.GetPropertyValue(_businessBase.DeviceId, nameof(OpcUaServerVariableProperty.DataTypeEnum))?.Value ?? "";
         Type tp;
         if (Enum.TryParse(str, out DataTypeEnum result))
         {

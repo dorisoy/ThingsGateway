@@ -17,7 +17,7 @@ using ThingsGateway.Gateway.Application;
 namespace ThingsGateway.Plugin.OpcUa;
 
 /// <inheritdoc/>
-public class OpcUaSlaveVariableProperty : VariablePropertyBase
+public class OpcUaServerVariableProperty : VariablePropertyBase
 {
     /// <summary>
     /// 数据类型
