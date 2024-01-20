@@ -11,27 +11,27 @@
 	</Target>
 
 	<ItemGroup>
-		<Compile Include="..\..\ThingsGateway.Demo.Rcl\Common\ChannelConfigs.cs" Link="Common\ChannelConfigs.cs" />
-		<Compile Include="..\..\ThingsGateway.Demo.Rcl\Common\VariableDemo.cs" Link="Common\VariableDemo.cs" />
-		<Compile Include="..\..\ThingsGateway.Demo.Rcl\Common\VariableSourceDemo.cs" Link="Common\VariableSourceDemo.cs" />
+		<Compile Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Common\ChannelConfigs.cs" Link="Common\ChannelConfigs.cs" />
+		<Compile Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Common\VariableDemo.cs" Link="Common\VariableDemo.cs" />
+		<Compile Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Common\VariableSourceDemo.cs" Link="Common\VariableSourceDemo.cs" />
 
-		<Compile Include="..\..\ThingsGateway.Demo.Rcl\Pages\AdapterDebugBase.cs" Link="Pages\AdapterDebugBase.cs" />
-		<Compile Include="..\..\ThingsGateway.Demo.Rcl\Pages\AdapterDebugPage.razor.cs" Link="Pages\AdapterDebugPage.razor.cs" />
-		<Compile Include="..\..\ThingsGateway.Demo.Rcl\Pages\ChannelEditPage.razor.cs" Link="Pages\ChannelEditPage.razor.cs" />
-		<Content Include="..\..\ThingsGateway.Demo.Rcl\Pages\AdapterDebugPage.razor" Link="Pages\AdapterDebugPage.razor" />
-		<Content Include="..\..\ThingsGateway.Demo.Rcl\Pages\ChannelEditPage.razor" Link="Pages\ChannelEditPage.razor" />
-		<Content Include="..\..\ThingsGateway.Demo.Rcl\Pages\ChannelPage.razor" Link="Pages\ChannelPage.razor" />
-		<Compile Include="..\..\ThingsGateway.Demo.Rcl\Pages\ChannelPage.razor.cs" Link="Pages\ChannelPage.razor.cs" />
+		<Compile Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\AdapterDebugBase.cs" Link="Pages\AdapterDebugBase.cs" />
+		<Compile Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\AdapterDebugPage.razor.cs" Link="Pages\AdapterDebugPage.razor.cs" />
+		<Compile Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\ChannelEditPage.razor.cs" Link="Pages\ChannelEditPage.razor.cs" />
+		<Content Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\AdapterDebugPage.razor" Link="Pages\AdapterDebugPage.razor" />
+		<Content Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\ChannelEditPage.razor" Link="Pages\ChannelEditPage.razor" />
+		<Content Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\ChannelPage.razor" Link="Pages\ChannelPage.razor" />
+		<Compile Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\ChannelPage.razor.cs" Link="Pages\ChannelPage.razor.cs" />
 
 	</ItemGroup>
 
 	<ItemGroup>
-		<Compile Include="..\..\ThingsGateway.Demo.Rcl\Pages\OpcDa\OpcDaMaster.razor.cs" Link="Pages\OpcDaMaster.razor.cs" />
-		<Compile Include="..\..\ThingsGateway.Demo.Rcl\Pages\OpcDa\OpcDaImportVariable.razor.cs" Link="Pages\OpcDaImportVariable.razor.cs" />
-		<Content Include="..\..\ThingsGateway.Demo.Rcl\Pages\OpcDa\OpcDaMaster.razor" Link="Pages\OpcDaMaster.razor" />
-		<Content Include="..\..\ThingsGateway.Demo.Rcl\Pages\OpcDa\OpcDaImportVariable.razor" Link="Pages\OpcDaImportVariable.razor" />
-		<Compile Include="..\..\ThingsGateway.Demo.Rcl\Pages\OpcDa\OpcDaMasterConnectPage.razor.cs" Link="Pages\OpcDaMasterConnectPage.razor.cs" />
-		<Content Include="..\..\ThingsGateway.Demo.Rcl\Pages\OpcDa\OpcDaMasterConnectPage.razor" Link="Pages\OpcDaMasterConnectPage.razor" />
+		<Compile Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\OpcDa\OpcDaMaster.razor.cs" Link="Pages\OpcDaMaster.razor.cs" />
+		<Compile Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\OpcDa\OpcDaImportVariable.razor.cs" Link="Pages\OpcDaImportVariable.razor.cs" />
+		<Content Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\OpcDa\OpcDaMaster.razor" Link="Pages\OpcDaMaster.razor" />
+		<Content Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\OpcDa\OpcDaImportVariable.razor" Link="Pages\OpcDaImportVariable.razor" />
+		<Compile Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\OpcDa\OpcDaMasterConnectPage.razor.cs" Link="Pages\OpcDaMasterConnectPage.razor.cs" />
+		<Content Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\OpcDa\OpcDaMasterConnectPage.razor" Link="Pages\OpcDaMasterConnectPage.razor" />
 	</ItemGroup>
 
 

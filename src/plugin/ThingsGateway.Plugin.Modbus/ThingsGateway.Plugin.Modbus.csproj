@@ -7,25 +7,25 @@
 	</Target>
 
 	<ItemGroup>
-		<Compile Include="..\..\ThingsGateway.Demo.Rcl\Common\ChannelConfigs.cs" Link="Common\ChannelConfigs.cs" />
-		<Compile Include="..\..\ThingsGateway.Demo.Rcl\Common\VariableDemo.cs" Link="Common\VariableDemo.cs" />
-		<Compile Include="..\..\ThingsGateway.Demo.Rcl\Common\VariableSourceDemo.cs" Link="Common\VariableSourceDemo.cs" />
+		<Compile Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Common\ChannelConfigs.cs" Link="Common\ChannelConfigs.cs" />
+		<Compile Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Common\VariableDemo.cs" Link="Common\VariableDemo.cs" />
+		<Compile Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Common\VariableSourceDemo.cs" Link="Common\VariableSourceDemo.cs" />
 
-		<Compile Include="..\..\ThingsGateway.Demo.Rcl\Pages\AdapterDebugBase.cs" Link="Pages\AdapterDebugBase.cs" />
-		<Compile Include="..\..\ThingsGateway.Demo.Rcl\Pages\AdapterDebugPage.razor.cs" Link="Pages\AdapterDebugPage.razor.cs" />
-		<Compile Include="..\..\ThingsGateway.Demo.Rcl\Pages\ChannelEditPage.razor.cs" Link="Pages\ChannelEditPage.razor.cs" />
-		<Content Include="..\..\ThingsGateway.Demo.Rcl\Pages\AdapterDebugPage.razor" Link="Pages\AdapterDebugPage.razor" />
-		<Content Include="..\..\ThingsGateway.Demo.Rcl\Pages\ChannelEditPage.razor" Link="Pages\ChannelEditPage.razor" />
-		<Content Include="..\..\ThingsGateway.Demo.Rcl\Pages\ChannelPage.razor" Link="Pages\ChannelPage.razor" />
-		<Compile Include="..\..\ThingsGateway.Demo.Rcl\Pages\ChannelPage.razor.cs" Link="Pages\ChannelPage.razor.cs" />
+		<Compile Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\AdapterDebugBase.cs" Link="Pages\AdapterDebugBase.cs" />
+		<Compile Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\AdapterDebugPage.razor.cs" Link="Pages\AdapterDebugPage.razor.cs" />
+		<Compile Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\ChannelEditPage.razor.cs" Link="Pages\ChannelEditPage.razor.cs" />
+		<Content Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\AdapterDebugPage.razor" Link="Pages\AdapterDebugPage.razor" />
+		<Content Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\ChannelEditPage.razor" Link="Pages\ChannelEditPage.razor" />
+		<Content Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\ChannelPage.razor" Link="Pages\ChannelPage.razor" />
+		<Compile Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\ChannelPage.razor.cs" Link="Pages\ChannelPage.razor.cs" />
 
 	</ItemGroup>
 
 	<ItemGroup>
-		<Compile Include="..\..\ThingsGateway.Demo.Rcl\Pages\Modbus\ModbusMaster.razor.cs" Link="Pages\ModbusMaster.razor.cs" />
-		<Compile Include="..\..\ThingsGateway.Demo.Rcl\Pages\Modbus\ModbusSlave.razor.cs" Link="Pages\ModbusSlave.razor.cs" />
-		<Content Include="..\..\ThingsGateway.Demo.Rcl\Pages\Modbus\ModbusMaster.razor" Link="Pages\ModbusMaster.razor" />
-		<Content Include="..\..\ThingsGateway.Demo.Rcl\Pages\Modbus\ModbusSlave.razor" Link="Pages\ModbusSlave.razor" />
+		<Compile Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\Modbus\ModbusMaster.razor.cs" Link="Pages\ModbusMaster.razor.cs" />
+		<Compile Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\Modbus\ModbusSlave.razor.cs" Link="Pages\ModbusSlave.razor.cs" />
+		<Content Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\Modbus\ModbusMaster.razor" Link="Pages\ModbusMaster.razor" />
+		<Content Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\Modbus\ModbusSlave.razor" Link="Pages\ModbusSlave.razor" />
 	</ItemGroup>
 
 

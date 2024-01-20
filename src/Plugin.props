@@ -9,7 +9,7 @@
 
 	<ItemGroup>
 
-		<ProjectReference Include="..\..\ThingsGateway.Gateway.Blazor\ThingsGateway.Gateway.Blazor.csproj">
+		<ProjectReference Include="$(SolutionDir)ThingsGateway.Gateway.Blazor\ThingsGateway.Gateway.Blazor.csproj">
 			<Private>false</Private>
 			<ExcludeAssets>runtime</ExcludeAssets>
 		</ProjectReference>
