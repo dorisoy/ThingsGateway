@@ -69,6 +69,7 @@ public abstract class AdapterDebugBase : BaseComponentBase, IDisposable
     protected override void Dispose(bool disposing)
     {
         _periodicTimer?.Dispose();
+        Plc?.SafeDispose();
         base.Dispose(disposing);
     }
 

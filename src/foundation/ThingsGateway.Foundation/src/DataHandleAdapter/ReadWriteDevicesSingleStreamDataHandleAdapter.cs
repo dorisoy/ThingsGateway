@@ -122,7 +122,7 @@ public abstract class ReadWriteDevicesSingleStreamDataHandleAdapter<TRequest> : 
                 var bytes = request.HeadBytes?.SpliceArray(body) ?? body;
                 if (bytes.Length > 2048)
                 {
-                    Logger?.Warning($"{ToString()}-注意接收大小超过2048");
+                    Logger?.Trace($"{ToString()}-注意接收大小超过2048，长度：{bytes.Length}");
                 }
                 var result = GetResponse(byteBlock, request, body, bytes);
                 if (result == FilterResult.Cache)
