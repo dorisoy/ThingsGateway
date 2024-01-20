@@ -127,7 +127,7 @@ public abstract class ReadWriteDevicesSingleStreamDataHandleAdapter<TRequest> : 
                 var result = GetResponse(byteBlock, request, body, bytes);
                 if (result == FilterResult.Cache)
                 {
-                    Logger.Trace($"{ToString()}-接收未完成，缓存报文-{request?.ErrorMessage}");
+                    Logger.Trace($"{ToString()}-接收未完成，缓存报文，现长度：{bytes.Length}  {request?.ErrorMessage}");
                     byteBlock.Pos = pos;//回退游标
                 }
                 return result;
