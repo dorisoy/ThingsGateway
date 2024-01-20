@@ -12,10 +12,12 @@
 
 #endregion
 
+using BlazorComponent;
+
 using Microsoft.AspNetCore.Components;
 
+using ThingsGateway.Components;
 using ThingsGateway.Foundation;
-using ThingsGateway.Foundation.Extension.Generic;
 
 using TouchSocket.Core;
 
@@ -121,6 +123,27 @@ public partial class AdapterDebugPage : AdapterDebugBase
             };
         base.OnInitialized();
     }
+
+    [Inject]
+    private IPlatformService PlatformService { get; set; }
+
+    private async Task OnExportClick()
+    {
+        if (!LogPath.IsNullOrEmpty())
+            await PlatformService.OnLogExport(LogPath);
+    }
+
+    private StringNumber tab;
+    private List<(int, string)> Messages { get; set; }
+
+    [Parameter, EditorRequired]
+    public string LogPath { get; set; }
+
+    /// <summary>
+    /// Height
+    /// </summary>
+    [Parameter, EditorRequired]
+    public StringNumber Height { get; set; } = 550;
 
     protected override async Task ExecuteAsync()
     {

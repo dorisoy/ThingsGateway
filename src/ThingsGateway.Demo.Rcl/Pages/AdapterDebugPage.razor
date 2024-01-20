@@ -169,24 +169,5 @@
 </MCard>
 
 
-@code {
-    [Inject]
-    IPlatformService PlatformService { get; set; }
-    private async Task OnExportClick()
-    {
-        if (!LogPath.IsNullOrEmpty())
-            await PlatformService.OnLogExport(LogPath);
-    }
-    StringNumber tab;
-    private List<(int, string)> Messages { get; set; }
-
-    [Parameter, EditorRequired]
-    public string LogPath { get; set; }
-    /// <summary>
-    /// Height
-    /// </summary>
-    [Parameter, EditorRequired]
-    public StringNumber Height { get; set; } = 550;
-}
-
+ 
 
