@@ -15,7 +15,7 @@
 		<RepositoryType>Gitee</RepositoryType>
 		<GenerateResxSourceIncludeDefaultValues>true</GenerateResxSourceIncludeDefaultValues>
 	</PropertyGroup>
-	<PropertyGroup Condition="'$(SolutionName)'!='ThingsGateway'">
+	<PropertyGroup Condition="'$(SolutionName)'=='ThingsGateway - Admin'">
 		<DefineConstants>Admin</DefineConstants>
 	</PropertyGroup>
 	<ItemGroup>

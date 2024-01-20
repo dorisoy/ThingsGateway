@@ -22,7 +22,7 @@ using TouchSocket.Core;
 
 namespace ThingsGateway.Demo
 {
-    public partial class ChannelPage
+    public partial class DemoChannelPage
     {
         private ChannelData ChannelData { get; set; }
 

@@ -35,7 +35,7 @@
 	  <Content Update="Pages\ChannelEditPage.razor">
 	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
 	  </Content>
-	  <Content Update="Pages\ChannelPage.razor">
+	  <Content Update="Pages\DemoChannelPage.razor">
 	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
 	  </Content>
 	  <Content Update="Pages\Modbus\ModbusMaster.razor">

@@ -20,8 +20,8 @@
 		<Compile Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\ChannelEditPage.razor.cs" Link="Pages\ChannelEditPage.razor.cs" />
 		<Content Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\AdapterDebugPage.razor" Link="Pages\AdapterDebugPage.razor" />
 		<Content Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\ChannelEditPage.razor" Link="Pages\ChannelEditPage.razor" />
-		<Content Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\ChannelPage.razor" Link="Pages\ChannelPage.razor" />
-		<Compile Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\ChannelPage.razor.cs" Link="Pages\ChannelPage.razor.cs" />
+		<Content Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\DemoChannelPage.razor" Link="Pages\DemoChannelPage.razor" />
+		<Compile Include="$(SolutionDir)ThingsGateway.Demo.Rcl\Pages\DemoChannelPage.razor.cs" Link="Pages\DemoChannelPage.razor.cs" />
 
 	</ItemGroup>
 
