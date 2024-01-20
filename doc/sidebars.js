@@ -72,7 +72,7 @@ module.exports = {
 
     {
       type: "category",
-      label: "插件手册",
+      label: "采集插件手册",
       items: [
         {
           type: "doc",
@@ -108,8 +108,14 @@ module.exports = {
           type: "doc",
           id: "206",
           label: "VariableExpression"
-        },
+        }
 
+      ]
+    },
+    {
+      type: "category",
+      label: "业务插件手册",
+      items: [
         {
           type: "doc",
           id: "201",
@@ -120,55 +126,68 @@ module.exports = {
           id: "301",
           label: "MqttClient"
         },
-        {
-          type: "doc",
-          id: "302",
-          label: "MqttServer"
-        },
-        {
-          type: "doc",
-          id: "302",
-          label: "RabbitMQProducer"
-        },
-        {
-          type: "doc",
-          id: "303",
-          label: "KafkaProducer"
-        },
-        {
-          type: "doc",
-          id: "304",
-          label: "TDengineDBProducer"
-        },
+        // {
+        //   type: "doc",
+        //   id: "302",
+        //   label: "MqttServer"
+        // },
+        // {
+        //   type: "doc",
+        //   id: "302",
+        //   label: "RabbitMQProducer"
+        // },
+        // {
+        //   type: "doc",
+        //   id: "303",
+        //   label: "KafkaProducer"
+        // },
+        // {
+        //   type: "doc",
+        //   id: "304",
+        //   label: "TDengineDBProducer"
+        // },
 
-        {
-          type: "doc",
-          id: "305",
-          label: "SqlDBProducer"
-        },
-        {
-          type: "doc",
-          id: "306",
-          label: "QuestDBProducer"
-        },
-        {
-          type: "doc",
-          id: "307",
-          label: "SqlHisAlarm"
-        },
+        // {
+        //   type: "doc",
+        //   id: "305",
+        //   label: "SqlDBProducer"
+        // },
+        // {
+        //   type: "doc",
+        //   id: "306",
+        //   label: "QuestDBProducer"
+        // },
+        // {
+        //   type: "doc",
+        //   id: "307",
+        //   label: "SqlHisAlarm"
+        // },
 
       ]
     },
+    // {
+    //   type: "category",
+    //   label: "Pro插件手册",
+    //   items: [
 
-    {
-      type: "category",
-      label: "Pro版本插件手册",
-      items: [
+    //   ]
+    // },
+    // {
+    //   type: "category",
+    //   label: "部署",
+    //   items: [
        
 
-      ]
-    },
+    //   ]
+    // },
+    // {
+    //   type: "category",
+    //   label: "常见问题",
+    //   items: [
+       
 
+    //   ]
+    // },
     {
       type: "category",
       label: "技术支持/合作",
