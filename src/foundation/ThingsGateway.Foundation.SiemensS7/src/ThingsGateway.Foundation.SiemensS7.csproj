@@ -6,7 +6,7 @@
 		<DocumentationFile></DocumentationFile>
 	</PropertyGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\..\ThingsGateway.Foundation\src\ThingsGateway.Foundation.csproj">
+		<ProjectReference Include="$(SolutionDir)ThingsGateway.Foundation\src\ThingsGateway.Foundation.csproj">
 			<Private>True</Private>
 			<CopyLocalSatelliteAssemblies>True</CopyLocalSatelliteAssemblies>
 		</ProjectReference>
