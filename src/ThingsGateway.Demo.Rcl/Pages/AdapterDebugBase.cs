@@ -14,6 +14,7 @@
 
 namespace ThingsGateway.Demo;
 
+using ThingsGateway.Components;
 using ThingsGateway.Core.Extension;
 using ThingsGateway.Core.Extension.Json;
 using ThingsGateway.Foundation;
