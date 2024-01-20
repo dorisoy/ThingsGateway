@@ -45,7 +45,7 @@ public partial class DbRepository<T> : SimpleClient<T> where T : class, new()
         //itenant = DbContext.Db;
 
         //注意Blazor组件的生命周期函数执行属于并行操作，必须使用CopyNew()重新获取新的仓储对象
-        //不直接不支持事务，需要使用同一个Context对象，传递NewContent
+        //不直接支持事务，需要使用同一个Context对象，传递NewContent
         NewContent = DbContext.Db.CopyNew();
     }
 
