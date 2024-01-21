@@ -1,6 +1,6 @@
 ---
-id: 305
-title: TDengineDBProducer
+id: 306
+title: QuestDBProducer
 ---
 
 
@@ -12,17 +12,17 @@ import Highlight from '@site/src/components/Highlight.js';
  
 ## 一、说明
 
-TDengineDBProducer适配TDengineDB时序数据库，可以定时/变化存储变量数据
+QuestDBProducer适配QuestDB时序数据库，可以定时/变化存储变量数据
 
 通道只支持 Other 
 
 ## 二、插件属性配置项
 
-<img src={require("@site/static/img/docs/TDengineDBProducer.png").default} />
+<img src={require("@site/static/img/docs/QuestDBProducer.png").default} />
 
 | 属性           |  说明                    | 备注|
 | ---------------| --------------------------| ---|
-| 链接字符串         | 链接字符串              | Host=localhost;Port=6030;Username=root;Password=taosdata;Database=test|
+| 链接字符串         | 链接字符串              | host=localhost;port=8812;username=admin;password=quest;database=qdb;ServerCompatibilityMode=NoTypeLoading;|
 | 是否选择全部变量         | 是否选择全部变量，true时不需要单个变量添加业务属性            |  |
 | 是否间隔执行         | 是否选择全部变量，true间隔上传，False变化检测上传            |  |
 | 间隔执行时间         | 间隔执行时间           |  |

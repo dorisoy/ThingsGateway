@@ -16,9 +16,17 @@ import Highlight from '@site/src/components/Highlight.js';
 
 :::
 
+:::tip `权限注意`
+
+Server的连接权限除了Id前缀限制外，账号密码同样要求，在网关后台创建的所有账号密码都可以登录MqttServer
+
+:::
+
+
 ## 一、说明
 
-MqttServer支持Tcp/webSocket方式接入
+MqttServer支持Tcp/webSocket方式接入，可以定时/变化发布数据，支持Rpc写入
+
 
 通道只支持 Other 
 

@@ -146,23 +146,27 @@ module.exports = {
           id: "305",
           label: "TDengineDBProducer"
         },
+        {
+          type: "doc",
+          id: "306",
+          label: "QuestDBProducer"
+        },
+        {
+          type: "doc",
+          id: "307",
+          label: "SqlDBProducer"
+        },
 
-        // {
-        //   type: "doc",
-        //   id: "305",
-        //   label: "SqlDBProducer"
-        // },
-        // {
-        //   type: "doc",
-        //   id: "306",
-        //   label: "QuestDBProducer"
-        // },
-        // {
-        //   type: "doc",
-        //   id: "307",
-        //   label: "SqlHisAlarm"
-        // },
-
+        {
+          type: "doc",
+          id: "308",
+          label: "SqlHisAlarm"
+        },
+        {
+          type: "doc",
+          id: "309",
+          label: "OpcUaServer"
+        },
       ]
     },
     // {
@@ -172,14 +176,18 @@ module.exports = {
 
     //   ]
     // },
-    // {
-    //   type: "category",
-    //   label: "部署",
-    //   items: [
+    {
+      type: "category",
+      label: "部署",
+      items: [
        
-
-    //   ]
-    // },
+        {
+          type: "doc",
+          id: "401",
+          label: "Windows部署"
+        },
+      ]
+    },
     // {
     //   type: "category",
     //   label: "常见问题",

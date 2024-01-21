@@ -1,6 +1,6 @@
 ---
-id: 305
-title: TDengineDBProducer
+id: 307
+title: SqlDBProducer
 ---
 
 
@@ -12,17 +12,21 @@ import Highlight from '@site/src/components/Highlight.js';
  
 ## 一、说明
 
-TDengineDBProducer适配TDengineDB时序数据库，可以定时/变化存储变量数据
+SqlDBProducer适配关系数据库，可以定时/变化存储变量数据，也可以实时更新数据到实时表
 
 通道只支持 Other 
 
 ## 二、插件属性配置项
 
-<img src={require("@site/static/img/docs/TDengineDBProducer.png").default} />
+<img src={require("@site/static/img/docs/SqlDBProducer.png").default} />
 
 | 属性           |  说明                    | 备注|
 | ---------------| --------------------------| ---|
-| 链接字符串         | 链接字符串              | Host=localhost;Port=6030;Username=root;Password=taosdata;Database=test|
+| 是否实时表         | 开启实时更新数据功能              | |
+| 是否历史表         | 开始历史存储功能              |true |
+| 实时表名称         | 实时表名称              | |
+| 数据库类型         | 数据库类型              | |
+| 链接字符串         | 链接字符串              | server=.;uid=sa;pwd=111111;database=test;|
 | 是否选择全部变量         | 是否选择全部变量，true时不需要单个变量添加业务属性            |  |
 | 是否间隔执行         | 是否选择全部变量，true间隔上传，False变化检测上传            |  |
 | 间隔执行时间         | 间隔执行时间           |  |
