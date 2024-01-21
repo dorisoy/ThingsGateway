@@ -180,22 +180,54 @@ module.exports = {
       type: "category",
       label: "部署",
       items: [
-       
+        {
+          type: "doc",
+          id: "400",
+          label: "编译发布"
+        },
         {
           type: "doc",
           id: "401",
-          label: "Windows部署"
+          label: "windows服务部署"
+        },
+        {
+          type: "doc",
+          id: "402",
+          label: "iis部署"
+        },
+        {
+          type: "doc",
+          id: "403",
+          label: "docker部署"
+        },
+        {
+          type: "doc",
+          id: "404",
+          label: "linux服务部署"
+        }
+      ]
+    },
+    {
+      type: "category",
+      label: "常见问题",
+      items: [
+        {
+          type: "doc",
+          id: "501",
+          label: "常见问题"
+        },
+        {
+          type: "doc",
+          id: "502",
+          label: "变量表达式常见问题"
+        },
+        {
+          type: "doc",
+          id: "503",
+          label: "业务脚本常见问题"
         },
       ]
     },
-    // {
-    //   type: "category",
-    //   label: "常见问题",
-    //   items: [
-       
-
-    //   ]
-    // },
     {
       type: "category",
       label: "技术支持/合作",

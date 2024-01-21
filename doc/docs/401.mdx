@@ -3,62 +3,35 @@ id: 401
 title: Windows部署
 ---
 
-## 一、windows服务
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import Tag from "@site/src/components/Tag.js";
+import Highlight from '@site/src/components/Highlight.js';
+
+
+:::tip `提示`
+
+ 如果需要Runtime依赖部署，需要安装ASP.NET Core Runtime，如果是独立发布部署，则不需要安装Runtime
+
+ 下载链接:https://dotnet.microsoft.com/zh-cn/download/dotnet
+
+:::
+
+
+
+
+ 
+
 
 遵循windows service服务安装/启动/停止方式 https://docs.microsoft.com/zh-cn/windows-server/administration/windows-commands/sc-create 
-- 安装
 
-```
-sc create <Name> binPath= <Path> start= auto
-net start <Name>
-```
-- 卸载
-
-```
-net stop <Name>
-sc delete <Name>
-```
-
-## 二、IIS
-
-自行查询相关资料 **AspNetCore/IIS**
+提供懒人bat脚本文件，管理员身份运行**WindowsServiceCreate.bat**
 
 
+<img src={require("@site/static/img/docs/Windows服务.png").default} />
 
+运行脚本后可以在windows服务中找到**ThingsGateway**
 
+<img src={require("@site/static/img/docs/Windows服务1.png").default} />
 
-## 三、PM2守护 
-
-详细安装请自行查找资料
-
-查阅详细官方文档 https://pm2.keymetrics.io/docs/usage/quick-start/
-
-下面介绍一下常用指令
-
-- 安装pm2
-
-```
-npm install pm2@latest -g
-```
-
-
-- 启用应用程序
-
-```
-pm2 start pm2-windows.json
-```
-
-- 停止应用程序
-
-```
-pm2 stop pm2-windows.json
-```
-
-- 开机自动启动
-
-```
-npm install pm2-windows-startup -g //服务安装
-pm2-startup install
-pm2 save //每次操作pm2应用列表时需执行
-```
+如需删除服务，运行**WindowsServiceDelete.bat**
 
