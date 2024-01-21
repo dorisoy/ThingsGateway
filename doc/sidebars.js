@@ -126,26 +126,26 @@ module.exports = {
           id: "301",
           label: "MqttClient"
         },
-        // {
-        //   type: "doc",
-        //   id: "302",
-        //   label: "MqttServer"
-        // },
-        // {
-        //   type: "doc",
-        //   id: "302",
-        //   label: "RabbitMQProducer"
-        // },
-        // {
-        //   type: "doc",
-        //   id: "303",
-        //   label: "KafkaProducer"
-        // },
-        // {
-        //   type: "doc",
-        //   id: "304",
-        //   label: "TDengineDBProducer"
-        // },
+        {
+          type: "doc",
+          id: "302",
+          label: "MqttServer"
+        },
+        {
+          type: "doc",
+          id: "303",
+          label: "RabbitMQProducer"
+        },
+        {
+          type: "doc",
+          id: "304",
+          label: "KafkaProducer"
+        },
+        {
+          type: "doc",
+          id: "305",
+          label: "TDengineDBProducer"
+        },
 
         // {
         //   type: "doc",
