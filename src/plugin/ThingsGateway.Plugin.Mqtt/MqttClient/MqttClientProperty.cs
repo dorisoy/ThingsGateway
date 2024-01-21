@@ -40,10 +40,10 @@ public class MqttClientProperty : BusinessPropertyWithCacheIntervalScript
     public bool IsWebSocket { get; set; } = false;
 
     /// <summary>
-    /// WebSocktUrl
+    /// WebSocketUrl
     /// </summary>
-    [DynamicProperty("WebSocktUrl", "")]
-    public string? WebSocktUrl { get; set; } = "ws://127.0.0.1:8083/mqtt";
+    [DynamicProperty("WebSocketUrl", "")]
+    public string? WebSocketUrl { get; set; } = "ws://127.0.0.1:8083/mqtt";
 
     /// <summary>
     /// 账号
