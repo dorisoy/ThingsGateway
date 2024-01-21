@@ -120,7 +120,7 @@
                         </ChildContent>
                     </MTooltip>
                 </MCol>
-                @if (Type.Name.Contains("BigText"))
+                @if (Type.Name.Contains("BigTextScript"))
                 {
                     <MCol Md=3 Sm=12>
                         <MButton Class="mx-2 my-1" OnClick=@(()=>CheckScript()) Color="primary">@AppService.I18n.T("检查")</MButton>

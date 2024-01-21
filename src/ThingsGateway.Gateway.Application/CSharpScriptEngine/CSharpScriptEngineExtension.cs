@@ -21,22 +21,24 @@ namespace ThingsGateway.Gateway.Application;
 #if false
 //变量脚本动态设置传输实体的Demo
 
-    public IEnumerable<dynamic> GetList(IEnumerable<dynamic> datas)
+    public class DemoScript:IDynamicModel
     {
-        List<ScriptDemo> scriptDemos = new List<ScriptDemo>();
-        foreach (var data in datas)
+        public IEnumerable<dynamic> GetList(IEnumerable<dynamic> datas)
         {
-            ScriptDemo scriptDemo = new ScriptDemo();
-            scriptDemo.Value = data.Value;
-            scriptDemo.Name = data.Name;
-            scriptDemo.IsOnline = data.IsOnline;
-            scriptDemo.ChangeTime = data.ChangeTime;
-            scriptDemos.Add(scriptDemo);
+            List<DemoData> demoDatas = new List<DemoData>();
+            foreach (var data in datas)
+            {
+                DemoData demoData = new DemoData();
+                demoData.Value = data.Value;
+                demoData.Name = data.Name;
+                demoData.IsOnline = data.IsOnline;
+                demoData.ChangeTime = data.ChangeTime;
+                demoDatas.Add(demoData);
+            }
+            return demoDatas;
         }
-        return scriptDemos;
     }
-
-    public class ScriptDemo
+    public class DemoData
     {
         public string Name { get; set; }
         public bool IsOnline { get; set; }
@@ -48,22 +50,23 @@ namespace ThingsGateway.Gateway.Application;
 #if false
 
 //采集设备脚本动态设置传输实体的Demo
-
-public IEnumerable<dynamic> GetList(IEnumerable<dynamic> datas)
+public class DemoScript:IDynamicModel
 {
-    List<ScriptDemo> scriptDemos = new List<ScriptDemo>();
-    foreach (var data in datas)
+    public IEnumerable<dynamic> GetList(IEnumerable<dynamic> datas)
     {
-        ScriptDemo scriptDemo = new ScriptDemo();
-        scriptDemo.Name = data.Name;
-        scriptDemo.ActiveTime = data.ActiveTime;
-        scriptDemo.DeviceStatus = data.DeviceStatus;
-        scriptDemos.Add(scriptDemo);
+        List<DemoData> demoDatas = new List<DemoData>();
+        foreach (var data in datas)
+        {
+            DemoData demoData = new DemoData();
+            demoData.Name = data.Name;
+            demoData.ActiveTime = data.ActiveTime;
+            demoData.DeviceStatus = data.DeviceStatus;
+            demoDatas.Add(demoData);
+        }
+        return demoDatas;
     }
-    return scriptDemos;
 }
-
-public class ScriptDemo
+public class DemoData
 {
     public string Name { get; set; }
 

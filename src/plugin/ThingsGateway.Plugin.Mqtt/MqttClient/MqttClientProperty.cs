@@ -78,9 +78,9 @@ public class MqttClientProperty : BusinessPropertyWithCacheIntervalScript
     private string rpcwriteTopic = "RpcWrite";
 
     /// <summary>
-    /// Rpc写入主题
+    /// Rpc写入Topic
     /// </summary>
-    [DynamicProperty("Rpc写入主题", "实际的写入主题为固定通配 {ThingsGateway/+/[RpcWrite]} ,其中RpcWrite为该属性填入内容，+通配符是不固定GUID值，每次执行写入时会在不同的主题中返回；返回结果主题会在主题后添加Response , 也就是{ThingsGateway/+/[RpcWrite]/Response}")]
+    [DynamicProperty("Rpc写入Topic", "实际的写入主题为固定通配 {ThingsGateway/+/[RpcWrite]} ,其中RpcWrite为该属性填入内容，+通配符是不固定GUID值，每次执行写入时会在不同的主题中返回；返回结果主题会在主题后添加Response , 也就是{ThingsGateway/+/[RpcWrite]/Response}")]
     public string RpcWriteTopic
     {
         get
@@ -101,8 +101,8 @@ public class MqttClientProperty : BusinessPropertyWithCacheIntervalScript
     }
 
     /// <summary>
-    /// 数据请求Rpc主题
+    /// 数据请求Topic
     /// </summary>
-    [DynamicProperty("数据请求Rpc主题", "这个主题接收到任何数据都会把全部的信息发送到变量/设备主题中")]
+    [DynamicProperty("数据请求Topic", "这个主题接收到任何数据都会把全部的信息发送到变量/设备/报警主题中")]
     public string RpcQuestTopic { get; set; } = "ThingsGateway/Quest";
 }

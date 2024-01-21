@@ -29,8 +29,10 @@ public class CSharpScriptEngine
         var cacheKey = $"{nameof(CSharpScriptEngine)}-{Do<T>}-{_source}";
         var runscript = NewLife.Caching.Cache.Default.GetOrAdd(cacheKey, c =>
         {
-            var eva = CSScript.Evaluator
-                   .LoadCode<T>(
+            try
+            {
+                var eva = CSScript.Evaluator
+                  .LoadCode<T>(
 @$"
 using System;
 using System.Linq;
@@ -39,7 +41,12 @@ using ThingsGateway.Core.Extension.Json;
 using ThingsGateway.Gateway.Application;
 {_source}
 ");
-            return eva;
+                return eva;
+            }
+            catch (NullReferenceException)
+            {
+                throw new Exception("找不到对应的实现类，检查脚本!");
+            }
         }, 3600);
         return runscript;
     }

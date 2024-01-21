@@ -53,7 +53,7 @@ public partial class MqttClient : BusinessBaseWithCacheIntervalScript<VariableDa
            .WithKeepAlivePeriod(TimeSpan.FromSeconds(120.0))
            .WithoutThrowOnNonSuccessfulConnectResponse();
         if (_driverPropertys.IsWebSocket)
-            _mqttClientOptions = mqttClientOptionsBuilder.WithWebSocketServer(a => a.WithUri(_driverPropertys.WebSocktUrl))
+            _mqttClientOptions = mqttClientOptionsBuilder.WithWebSocketServer(a => a.WithUri(_driverPropertys.WebSocketUrl))
            .Build();
         else
             _mqttClientOptions = mqttClientOptionsBuilder.WithTcpServer(_driverPropertys.IP, _driverPropertys.Port)//服务器
