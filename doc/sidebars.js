@@ -219,12 +219,23 @@ module.exports = {
         {
           type: "doc",
           id: "502",
-          label: "变量表达式常见问题"
+          label: "脚本常见问题"
+        },
+      ]
+    },
+    {
+      type: "category",
+      label: "插件开发",
+      items: [
+        {
+          type: "doc",
+          id: "601",
+          label: "采集插件"
         },
         {
           type: "doc",
-          id: "503",
-          label: "业务脚本常见问题"
+          id: "602",
+          label: "业务插件"
         },
       ]
     },
@@ -232,6 +243,11 @@ module.exports = {
       type: "category",
       label: "技术支持/合作",
       items: [
+        {
+          type: "doc",
+          id: "1002",
+          label: "联系我们"
+        },
         {
           type: "doc",
           id: "1000",

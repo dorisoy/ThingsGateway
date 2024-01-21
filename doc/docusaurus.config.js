@@ -61,11 +61,11 @@ module.exports = {
             },
           ],
         },
-        {
-          label: "博客",
-          position: "right",
-          href: "https://www.cnblogs.com/ThingsGateway/collections/1104",
-        },
+        // {
+        //   label: "博客",
+        //   position: "right",
+        //   href: "https://www.cnblogs.com/ThingsGateway/collections/1104",
+        // },
         {
           label: "视频",
           position: "right",
